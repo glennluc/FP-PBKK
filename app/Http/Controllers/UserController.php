@@ -63,7 +63,7 @@ class UserController extends Controller
         $bagian = Bagian::all();
         $rootjabatan = RootJabatan::all();
 
-        return view('admin/edituser', compact('user','jabatan', 'bagian', 'rootjabatan'));
+        return view('admin/edit_user', compact('user','jabatan', 'bagian', 'rootjabatan'));
     }
 
     public function updateUser(Request $request)
