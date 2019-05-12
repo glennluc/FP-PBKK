@@ -50,17 +50,17 @@ class UserController extends Controller
 
         return redirect('admin/get-user');
     }
-
-    Public function showCreateUser($id)
-    {
-        $user = DB::table('users')
-                ->select('*')
-                ->where('id_user',$id)
-                ->get() ;
-        $jabatan = Jabatan::all();
-        $bagian = Bagian::all();
-        $rootjabatan = RootJabatan::all();
-        
-        return view('admin/create_user', compact('jabatan', 'bagian', 'rootjabatan'));
-    }
+//
+//    Public function showCreateUser($id)
+//    {
+//        $user = DB::table('users')
+//                ->select('*')
+//                ->where('id_user',$id)
+//                ->get() ;
+//        $jabatan = Jabatan::all();
+//        $bagian = Bagian::all();
+//        $rootjabatan = RootJabatan::all();
+//
+//        return view('admin/create_user', compact('jabatan', 'bagian', 'rootjabatan'));
+//    }
 }
