@@ -50,6 +50,49 @@ class UserController extends Controller
 
         return redirect('admin/get-user');
     }
+    public function showEditUser($id)
+    {
+        $user = DB::table('users')
+            ->join('jabatans', 'users.id_jabatans','=','jabatans.id_jabatan')
+            ->join('bagians', 'users.id_bagians','=','bagians.id_bagian')
+            ->join('rootjabatans', 'users.id_rootJabs','=','rootjabatans.id_rootJab')
+            ->select('users.*','jabatans.nama_jabatan', 'bagians.nama_bagian', 'rootjabatans.root_jab')
+            ->where('users.id_user',$id)
+            ->get();
+        $jabatan = Jabatan::all();
+        $bagian = Bagian::all();
+        $rootjabatan = RootJabatan::all();
+
+        return view('admin/edituser', compact('user','jabatan', 'bagian', 'rootjabatan'));
+    }
+
+    public function updateUser(Request $request)
+    {
+        $user = array(
+            'username' => $request->username,
+            'nik' => $request->nik,
+            'name' => $request->nama,
+            'email' => $request->email,
+            'jenis_kelamin' => $request->jenis_kelamin,
+            'tanggal_lahir' => $request->tgllahir,
+            'handphone' => $request->hp,
+            'alamat' => $request->alamat,
+            'id_jabatans' => $request->jabatan,
+            'id_bagians' => $request->bagian,
+            'id_rootJabs' => $request->rootjabatan,
+            'authority' => $request->authority
+        );
+
+        DB::table('users')
+            ->where('id_user', $request->id)
+            ->update($user);
+
+        return redirect('admin/get-user');
+    }
+    public function DeleteUser(Request $request)
+    {
+        $user = array();
+    }
 //
 //    Public function showCreateUser($id)
 //    {

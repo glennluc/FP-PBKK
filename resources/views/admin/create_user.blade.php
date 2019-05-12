@@ -14,8 +14,7 @@
             <div class="row justify-content-between">
                 <ul class="nav nav-material nav-material-white responsive-tab" id="v-pills-tab" role="tablist">
                     <li>
-                        <a class="nav-link" id="v-pills-all-tab" data-toggle="pill" href="{{ URL('admin/get-user')}}"
-                           role="tab" aria-controls="v-pills-all"><i class="icon icon-home2"></i>All Users</a>
+                        <a class="nav-link" href="{{ URL('admin/get-user')}}"><i class="icon icon-home2"></i>All Users</a>
                     </li>
                     <li class="float-right">
                         <a class="nav-link active"  href="{{ URL('admin/create-user')}}" ><i class="icon icon-plus-circle"></i> Add New User</a>
