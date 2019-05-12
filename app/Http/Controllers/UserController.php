@@ -63,7 +63,6 @@ class UserController extends Controller
         $jabatan = Jabatan::all();
         $bagian = Bagian::all();
         $rootjabatan = RootJabatan::all();
-
         return view('admin/edit_user', compact('user','jabatan', 'bagian', 'rootjabatan'));
     }
 
