@@ -71,7 +71,7 @@
                                             <td>
                                                 <a href="panel-page-profile.html"><i class="icon-eye mr-3"></i></a>
                                                 <a href="panel-page-profile.html"><i class="icon-pencil mr-3"></i></a>
-                                                <a href="panel-page-profile.html"><i class="icon-trash"></i></a>
+                                                <a href="{{URL('admin/delete-bagian/'.$row->id_bagian)}}"><i class="icon-trash"></i></a>
                                             </td>
                                         </tr>
                                         <?php  }  ?>

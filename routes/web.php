@@ -30,6 +30,8 @@ Route::post('/admin/edit-user/{id}', 'UserController@EditUser');
 Route::get('/admin/get-bagian', 'BagianController@GetBagian');
 Route::get('/admin/create-bagian', 'BagianController@showCreateBagian');
 Route::post('/admin/create-bagian', 'BagianController@CreateBagian');
+Route::get('/admin/delete-bagian/{id}', 'BagianController@DeleteBagian');
+Route::post('/admin/update-bagian/{id}', 'BagianController@CreateBagian');
 
 Route::get('/admin/get-jabatan', 'JabatanController@GetJabatan');
 Route::get('/admin/create-jabatan', 'JabatanController@showCreateJabatan');

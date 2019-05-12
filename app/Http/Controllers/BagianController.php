@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
+use App\Bagian;
 
 class BagianController extends Controller
 {
@@ -20,15 +21,36 @@ class BagianController extends Controller
 
     Public function CreateBagian(Request $request)
     {
-        $user = new User;
+        $bagian = new Bagian;
 
-        $user->kode_bagian = $request->kode_bagian;
-        $user->nama_bagian = $request->nama_bagian;
-        $user->keterangan = $request->keterangan;
+        $bagian->kode_bagian = $request->kode_bagian;
+        $bagian->nama_bagian = $request->nama_bagian;
+        $bagian->keterangan = $request->keterangan;
 
-        $user->save();
+        $bagian->save();
 
-        return redirect('admin/get_bagian');
+        return redirect('admin/get-bagian');
+    }
+
+    public function DeleteBagian($id)
+    {
+    	$bagian = DB::table('bagians')->where('id_bagian', $id)->delete();
+        return redirect('admin/get-bagian');
+    }
+
+    Public function UpdateBagian(Request $request)
+    {
+    	$bagian = array(
+            'kode_bagian' => $request->kode_bagian,
+            'nama_bagian' => $request->nama_bagian,
+            'keterangan' => $request->keterangan
+        );
+
+        DB::table('bagians')
+            ->where('id_bagian', $request->id_bagian)
+            ->update($bagian);
+
+        return redirect('admin/get-bagian');
     }
 
 
