@@ -48,8 +48,10 @@ class UserController extends Controller
 
         $user->save();
 
-        return redirect('admin/get-user');
+        return redirect('admin/get_user');
     }
+
+    
 //
 //    Public function showCreateUser($id)
 //    {
