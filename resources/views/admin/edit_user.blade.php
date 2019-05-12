@@ -28,7 +28,7 @@
         <div class="animated fadeInUpShort">
             <div class="row my-3">
                 <div class="col-md-7  offset-md-2">
-                    <form accept-charset="UTF-8" role="form" action="{{ URl('admin/create-user') }}" method="post">
+                    <form accept-charset="UTF-8" role="form" action="{{ URl('admin/edit-user') }}" method="post">
                         <fieldset>
                             @csrf
                             <div class="card no-b  no-r">
@@ -53,7 +53,7 @@
                                                 </div>
                                                 <div class="form-group m-0">
                                                     <label for="name" class="col-form-label s-12">Nama User</label>
-                                                    <input name="name" value="{{$value->name}}"
+                                                    <input name="nama" value="{{$value->name}}"
                                                            placeholder="Masukkan Nama Pegawai"
                                                            class="form-control r-0 light s-12 " type="text">
                                                 </div>
@@ -93,17 +93,18 @@
                                                     <div class="form-group col-6 m-0">
                                                         <label for="noHP" class="col-form-label s-12">No
                                                             Handphone</label>
-                                                        <input name="no_hp" placeholder="Masukkan No HP Pegawai"
+                                                        <input name="hp" value="{{$value->handphone}}" placeholder="Masukkan No HP Pegawai"
                                                                class="form-control r-0 light s-12 " type="text">
                                                     </div>
                                                     <div class="form-group col-6 m-0">
                                                         <label for="tgl_lahir" class="col-form-label s-12"><i
                                                                     class="icon-calendar mr-2"></i>Tanggal Lahir</label>
-                                                        <input name="tgl_lahir"
+                                                        <input name="tgllahir" value="{{$value->tanggal_lahir}}"
                                                                placeholder="Pilih Tanggal Lahir Pegawai"
                                                                class="form-control r-0 light s-12 datePicker"
                                                                data-time-picker="true"
                                                                data-format-date='Y/m/d' type="date">
+
                                                     </div>
                                                 </div>
 
@@ -111,15 +112,8 @@
                                                     <div class="form-group col-6 m-0">
                                                         <label for="email" class="col-form-label s-12"><i
                                                                     class="icon-envelope-o mr-2"></i>Email</label>
-                                                        <input name="email" placeholder="Masukkan Email Pegawai"
+                                                        <input name="email" value="{{$value->email}}" placeholder="Masukkan Email Pegawai"
                                                                class="form-control r-0 light s-12 " type="text">
-                                                    </div>
-
-                                                    <div class="form-group col-6 m-0">
-                                                        <label for="password" class="col-form-label s-12"><i
-                                                                    class="icon-user mr-2"></i>Password</label>
-                                                        <input name="password" placeholder="Masukkan Password Pegawai"
-                                                               class="form-control r-0 light s-12 " type="password">
                                                     </div>
                                                 </div>
 
@@ -127,7 +121,7 @@
                                                     <label for="alamat" class="col-form-label s-12">Alamat</label>
                                                     <textarea name="alamat" placeholder="Masukkan Alamat Pegawai"
                                                               class="form-control r-0 light s-12 "
-                                                              type="text"></textarea>
+                                                              type="text">{{$value->alamat}}</textarea>
                                                 </div>
                                             </div>
                                         @endforeach
@@ -139,19 +133,19 @@
                                     <div class="form-row">
                                         <div class="form-group col-6 m-0">
                                             <label for="roll1" class="col-form-label s-12">Bagian</label>
-                                            <select name="id_bagian" class="form-control r-0 light s-12" required="">
-                                                <option>Bagian</option>
-                                                <?php  foreach ($bagian as $value) : ?>
-                                                <option value="{{$value->id_bagian}}">{{$value->nama_bagian}}</option>
+                                            <select name="bagian" class="form-control r-0 light s-12" required="">
+                                                <option value="{{$value->id_bagians}}"}}>{{$value->nama_bagian}}</option>
+                                                <?php  foreach ($bagian as $val) : ?>
+                                                <option value="{{$val->id_bagians}}">{{$val->nama_bagian}}</option>
                                                 <?php endforeach; ?>
                                             </select>
                                         </div>
                                         <div class="form-group col-6 m-0">
                                             <label for="roll1" class="col-form-label s-12">Jabatan</label>
-                                            <select name="id_jabatan" class="form-control r-0 light s-12" required="">
-                                                <option>Jabatan</option>
-                                                <?php  foreach ($jabatan as $value) : ?>
-                                                <option value="{{$value->id_jabatan}}">{{$value->nama_jabatan}}</option>
+                                            <select name="jabatan" class="form-control r-0 light s-12" required="">
+                                                <option value="{{$value->id_jabatans}}">{{$value->nama_jabatan}}</option>
+                                                <?php  foreach ($jabatan as $val) : ?>
+                                                <option value="{{$val->id_jabatans}}">{{$val->nama_jabatan}}</option>
                                                 <?php endforeach; ?>
                                             </select>
                                         </div>
@@ -159,17 +153,17 @@
                                     <div class="form-row">
                                         <div class="form-group col-6 m-0">
                                             <label for="roll1" class="col-form-label s-12">Root Jabatan</label>
-                                            <select name="id_rootJab" class="form-control r-0 light s-12" required="">
-                                                <option>Root Jabatan</option>
-                                                <?php  foreach ($rootjabatan as $value) : ?>
-                                                <option value="{{$value->id_rootJab}}">{{$value->root_jab}}</option>
+                                            <select name="rootjabatan" class="form-control r-0 light s-12" required="">
+                                                <option value="{{$value->id_rootJabs}}">{{$value->root_jab}}</option>
+                                                <?php  foreach ($rootjabatan as $val) : ?>
+                                                <option value="{{$val->id_rootJabs}}">{{$val->root_jab}}</option>
                                                 <?php endforeach; ?>
                                             </select>
                                         </div>
                                         <div class="form-group col-6 m-0">
                                             <label for="roll1" class="col-form-label s-12">Authority</label>
                                             <select name="authority" class="form-control r-0 light s-12" required="">
-                                                <option>Authority</option>
+                                                <option value="{{$value->authority}}">{{$value->authority}}</option>
                                                 <option value="admin">Admin</option>
                                                 <option value="user">User</option>
                                                 <option value="sekretaris">Sekretaris</option>
