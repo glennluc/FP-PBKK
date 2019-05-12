@@ -93,13 +93,13 @@
                                                     <div class="form-group col-6 m-0">
                                                         <label for="noHP" class="col-form-label s-12">No
                                                             Handphone</label>
-                                                        <input name="no_hp" placeholder="Masukkan No HP Pegawai"
+                                                        <input name="no_hp" value="{{$value->handphone}}" placeholder="Masukkan No HP Pegawai"
                                                                class="form-control r-0 light s-12 " type="text">
                                                     </div>
                                                     <div class="form-group col-6 m-0">
                                                         <label for="tgl_lahir" class="col-form-label s-12"><i
                                                                     class="icon-calendar mr-2"></i>Tanggal Lahir</label>
-                                                        <input name="tgl_lahir"
+                                                        <input name="tgl_lahir" value="{{$value->tanggal_lahir}}"
                                                                placeholder="Pilih Tanggal Lahir Pegawai"
                                                                class="form-control r-0 light s-12 datePicker"
                                                                data-time-picker="true"
@@ -111,15 +111,8 @@
                                                     <div class="form-group col-6 m-0">
                                                         <label for="email" class="col-form-label s-12"><i
                                                                     class="icon-envelope-o mr-2"></i>Email</label>
-                                                        <input name="email" placeholder="Masukkan Email Pegawai"
+                                                        <input name="email" value="{{$value->email}}" placeholder="Masukkan Email Pegawai"
                                                                class="form-control r-0 light s-12 " type="text">
-                                                    </div>
-
-                                                    <div class="form-group col-6 m-0">
-                                                        <label for="password" class="col-form-label s-12"><i
-                                                                    class="icon-user mr-2"></i>Password</label>
-                                                        <input name="password" placeholder="Masukkan Password Pegawai"
-                                                               class="form-control r-0 light s-12 " type="password">
                                                     </div>
                                                 </div>
 
@@ -127,7 +120,7 @@
                                                     <label for="alamat" class="col-form-label s-12">Alamat</label>
                                                     <textarea name="alamat" placeholder="Masukkan Alamat Pegawai"
                                                               class="form-control r-0 light s-12 "
-                                                              type="text"></textarea>
+                                                              type="text">{{$value->alamat}}</textarea>
                                                 </div>
                                             </div>
                                         @endforeach
