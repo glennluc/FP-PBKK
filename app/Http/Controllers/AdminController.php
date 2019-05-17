@@ -19,11 +19,7 @@ class AdminController extends Controller
      */
     public function index()
     {
-        $clog = Session::get('clog');
-        $user = DB::table('users')
-            ->where('id_user',$clog)
-            ->get();
-        return view('admin/dashboard',['user'=>$user]);
+        return view('admin/dashboard');
     }
     
 }
