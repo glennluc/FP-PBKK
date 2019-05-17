@@ -82,9 +82,8 @@
                                             <td>{{$row->status_surat}}</td>
                                             <td>{{$row->status_disposisi}}</td>
                                             <td>
-                                                <a href="panel-page-profile.html"><i class="icon-eye mr-3"></i></a>
-                                                <a href=""><i class="icon-pencil mr-3"></i></a>
-                                                <a href=""><i class="icon-trash"></i></a>
+                                                <a href="{{URL('admin/download-surat/'.$row->id_surat)}}"><i class="icon-eye mr-3"></i></a>
+                                                <a href="{{URL('admin/delete-surat/'.$row->id_surat)}}"><i class="icon-trash"></i></a>
                                             </td>
                                         </tr>
                                         <?php  }  ?>

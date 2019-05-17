@@ -75,7 +75,7 @@
                                             <td>
                                                 <a href="#"><i class="icon-eye mr-3"></i></a>
                                                 <a href="{{URL('admin/edit-user/'.$row->id_user)}}"><i class="icon-pencil mr-3"></i></a>
-                                                <a href="{{URL('admin/delete-user'.$row->id_user)}}"><i class="icon-trash"></i></a>
+                                                <a href="{{URL('admin/delete-user/'.$row->id_user)}}"><i class="icon-trash"></i></a>
                                             </td>
                                         </tr>
                                         <?php  }  ?>

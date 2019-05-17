@@ -47,6 +47,11 @@ Route::get('/admin/get-surat', 'SuratController@GetSurat');
 Route::get('/admin/create-surat', 'SuratController@showCreateSurat');
 Route::post('/admin/create-surat', 'SuratController@CreateSurat');
 
+
 Route::get('/admin/get-disposisi', 'DisposisiController@GetDisposisi');
 Route::get('/admin/create-disposisi', 'DisposisiController@showCreateDisposisi');
 Route::post('/admin/create-disposisi', 'DisposisiController@CreateDisposisi');
+
+Route::get('admin/download-surat/{id}', 'SuratController@DownloadSurat');
+Route::get('/admin/delete-surat/{id}', 'SuratController@DeleteSurat');
+
