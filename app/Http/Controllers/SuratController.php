@@ -6,6 +6,7 @@ use App\Jabatan;
 use App\Bagian;
 use App\RootJabatan;
 use App\Surat;
+use Faker\Provider\File;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Http\RedirectResponse;
@@ -26,6 +27,9 @@ class SuratController extends Controller
 
     Public function CreateSurat(Request $request)
     {
+        $this->validate($request,[
+            'file' => 'required|file|max:10000'
+        ]);
         $surat = new Surat;
 
         $surat->no_surat = $request->no_surat;
@@ -41,8 +45,15 @@ class SuratController extends Controller
         $surat->no_berkas = $request->no_berkas;
         $surat->status_surat = $request->status_surat;
         $surat->status_disposisi = $request->status_disposisi;
-        $surat->file_surat = $request->file_surat;
-        $surat->file_path = $request->file_path;
+
+        $file_surat = $request->file('file_surat');
+        $surat->file_surat = $file_surat;
+        $surat->file_path = $file_surat->store('public/files');
+        $file = File::create([
+            'title' => $request->title ?? $file_surat->getClientOriginalName(),
+            'filename' => $file_surat->store('public/files')
+        ]);
+
         $surat->keterangan = $request->keterangan;
         $surat->tanggal_entry = $request->tanggal_entry;
         $surat->waktu_entry = $request->waktu_entry;
@@ -50,7 +61,9 @@ class SuratController extends Controller
 
         $surat->save();
 
-        return redirect('admin/get-surat');
+        return redirect()
+            ->back()
+            ->withSuccess(sprintf('Surat berhasil dimasukkan'));
     }
 
 }
