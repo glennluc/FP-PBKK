@@ -68,7 +68,7 @@ class SuratController extends Controller
     {
         $surat = DB::table('surats')->where('id_surat',$id)
             ->first();
-        $file = public_path() . $surat->file_path;
+        $file = public_path() . $surat->file_path .'/';
 
         $headers = [
             'Content-Type' => 'application/pdf',
