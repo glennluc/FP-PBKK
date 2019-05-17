@@ -172,23 +172,20 @@
                         <li><a href="{{URL('admin/get-user')}}"><i class="icon icon-circle-o"></i>User</a></li>
                         <li><a href="{{URL('admin/get-bagian')}}"><i class="icon icon-circle-o"></i>Bagian</a></li>
                         <li><a href="{{URL('admin/get-jabatan')}}"><i class="icon icon-circle-o"></i>Jabatan</a></li>
-                        <li><a href="{{URL('admin/get-rootjab')}}"><i class="icon icon-circle-o"></i>Root Jabatan</a>
-                        </li>
+                        <li><a href="{{URL('admin/get-rootjab')}}"><i class="icon icon-circle-o"></i>Root Jabatan</a></li>
                     </ul>
                 </li>
                 <li class="treeview no-b"><a href="#">
                         <i class="icon icon-package light-green-text s-18"></i>
-                        <span>Inbox</span>
+                        <span>Surat</span>
                         <span class="badge r-3 badge-success pull-right">20</span>
                     </a>
                     <ul class="treeview-menu">
-                        <li><a href="panel-page-inbox.html"><i class="icon icon-circle-o"></i>All Messages</a>
+                        <li><a href="{{URL('admin/get-surat')}}"><i class="icon icon-circle-o"></i>Surat Masuk/Keluar</a>
                         </li>
-                        <li><a href="panel7-inbox.html"><i class="icon icon-circle-o"></i>Panel7 - Inbox</a>
+                        <li><a href="{{URL('admin/get-laporansurat')}}"><i class="icon icon-circle-o"></i>Laporan Surat Masuk/Keluar</a>
                         </li>
-                        <li><a href="panel8-inbox.html"><i class="icon icon-circle-o"></i>Panel8 - Inbox</a>
-                        </li>
-                        <li><a href="panel-page-inbox-create.html"><i class="icon icon-add"></i>Compose</a>
+                        <li><a href="{{URL('admin/get-disposisi')}}"><i class="icon icon-circle-o"></i>Disposisi</a>
                         </li>
                     </ul>
                 </li>
@@ -209,67 +206,9 @@
                 </div>
             </div>
         </div>
-<<<<<<< HEAD
-        <ul class="sidebar-menu">
-            <li class="header"><strong>MAIN NAVIGATION</strong></li>
-            <li class="treeview"><a href="{{URL('admin/dashboard')}}">
-                <i class="icon icon-sailing-boat-water purple-text s-18"></i> <span>Dashboard</span>
-            </a>
-                
-            </li>
-            <li class="treeview"><a href="#">
-                <i class="icon icon icon-package blue-text s-18"></i>
-                <span>Products</span>
-                <span class="badge r-3 badge-primary pull-right">4</span>
-            </a>
-                <ul class="treeview-menu">
-                    <li><a href="panel-page-products.html"><i class="icon icon-circle-o"></i>All Products</a>
-                    </li>
-                    <li><a href="panel-page-products-create.html"><i class="icon icon-add"></i>Add
-                        New </a>
-                    </li>
-                </ul>
-            </li>
-            <li class="treeview"><a href="#"><i class="icon icon-account_box light-green-text s-18"></i>Management<i
-                    class="icon icon-angle-left s-18 pull-right"></i></a>
-                <ul class="treeview-menu">
-                    <li><a href="{{URL('admin/get-user')}}"><i class="icon icon-circle-o"></i>User</a></li>
-                    <li><a href="{{URL('admin/get-bagian')}}"><i class="icon icon-circle-o"></i>Bagian</a></li>
-                    <li><a href="{{URL('admin/get-jabatan')}}"><i class="icon icon-circle-o"></i>Jabatan</a></li>
-                    <li><a href="{{URL('admin/get-rootjab')}}"><i class="icon icon-circle-o"></i>Root Jabatan</a></li>
-                </ul>
-            </li>
-            <li class="treeview no-b"><a href="#">
-                <i class="icon icon-package light-green-text s-18"></i>
-                <span>Surat</span>
-                <span class="badge r-3 badge-success pull-right">20</span>
-            </a>
-                <ul class="treeview-menu">
-                    <li><a href="{{URL('admin/get-surat')}}"><i class="icon icon-circle-o"></i>Surat Masuk/Keluar</a>
-                    </li>
-                    <li><a href="{{URL('admin/get-laporansurat')}}"><i class="icon icon-circle-o"></i>Laporan Surat Masuk/Keluar</a>
-                    </li>
-                    <li><a href="{{URL('admin/get-disposisi')}}"><i class="icon icon-circle-o"></i>Disposisi</a>
-                    </li>
-                </ul>
-            </li>
-        </ul>
+
     </section>
 </aside>
-<!--Sidebar End-->
-<div class="has-sidebar-left">
-    <div class="pos-f-t">
-    <div class="collapse" id="navbarToggleExternalContent">
-        <div class="bg-dark pt-2 pb-2 pl-4 pr-2">
-            <div class="search-bar">
-                <input class="transparent s-24 text-white b-0 font-weight-lighter w-128 height-50" type="text"
-                       placeholder="start typing...">
-            </div>
-            <a href="#" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-expanded="false"
-               aria-label="Toggle navigation" class="paper-nav-toggle paper-nav-white active "><i></i></a>
-        </div>
-    </div>
-</div>
 @yield('content')
 
     <!-- Add the sidebar's background. This div must be placed
