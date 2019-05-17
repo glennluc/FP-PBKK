@@ -114,11 +114,11 @@
                                                 <input name="file_surat" class="form-control r-0 light s-12 "
                                                        type="file">
                                             </div>
-                                            <div class="form-group m-0">
-                                                <label for="file_path" class="col-form-label s-12">File Path</label>
-                                                <input name="file_path" class="form-control r-0 light s-12 "
-                                                       type="text">
-                                            </div>
+                                            {{--<div class="form-group m-0">--}}
+                                                {{--<label for="file_path" class="col-form-label s-12">File Path</label>--}}
+                                                {{--<input name="file_path" class="form-control r-0 light s-12 "--}}
+                                                       {{--type="text">--}}
+                                            {{--</div>--}}
                                             <div class="form-group m-0">
                                                 <label for="keterangan" class="col-form-label s-12">Keterangan</label>
                                                 <input name="keterangan" class="form-control r-0 light s-12 "

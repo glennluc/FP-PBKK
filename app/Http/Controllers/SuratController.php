@@ -27,9 +27,7 @@ class SuratController extends Controller
 
     Public function CreateSurat(Request $request)
     {
-//        $this->validate($request,[
-//            'file' => 'required|file|max:10000'
-//        ]);
+
         $ltime = date('Y-m-d H:i:s');
         $ldate = date('Y-m-d');
 
@@ -52,10 +50,7 @@ class SuratController extends Controller
         $file_surat = $request->file('file_surat');
         $surat->file_surat = $file_surat->getClientOriginalName();
         $surat->file_path = $file_surat->store('public/files');
-//        $file = File::create([
-//            'title' => $request->title ?? $file_surat->getClientOriginalName(),
-//            'filename' => $file_surat->store('public/files')
-//        ]);
+        $nama_file = $file_surat->store('public/files');
 
         $surat->keterangan = $request->keterangan;
         $surat->tanggal_entry = $ldate;
@@ -63,8 +58,8 @@ class SuratController extends Controller
 
         $surat->save();
 
-        return redirect('admin/get-surat');
-//            ->withSuccess(sprintf('Surat berhasil dimasukkan'));
+        return redirect('admin/get-surat')
+            ->withSuccess(sprintf('Surat berhasil dimasukkan'));
     }
 
 }
