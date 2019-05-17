@@ -74,10 +74,9 @@
                                                 <label for="dari" class="col-form-label s-12">Dari</label>
                                                 <input name="dari" class="form-control r-0 light s-12 " type="text">
                                             </div>
-                                            <div class="form-group m-0">
-                                                <label for="id_users" class="col-form-label s-12">ID User</label>
-                                                <input name="id_users" class="form-control r-0 light s-12 " type="text">
-                                            </div>
+                                            <input name="id_users" class="form-control r-0 light s-12 "
+                                                   value="{{\Illuminate\Support\Facades\Session::get('clogid')}}"
+                                                   type="hidden">
                                             <div class="form-group m-0">
                                                 <label for="tujuan_surat_keluar"
                                                        class="col-form-label s-12">Tujuan</label>
@@ -115,9 +114,9 @@
                                                        type="file">
                                             </div>
                                             {{--<div class="form-group m-0">--}}
-                                                {{--<label for="file_path" class="col-form-label s-12">File Path</label>--}}
-                                                {{--<input name="file_path" class="form-control r-0 light s-12 "--}}
-                                                       {{--type="text">--}}
+                                            {{--<label for="file_path" class="col-form-label s-12">File Path</label>--}}
+                                            {{--<input name="file_path" class="form-control r-0 light s-12 "--}}
+                                            {{--type="text">--}}
                                             {{--</div>--}}
                                             <div class="form-group m-0">
                                                 <label for="keterangan" class="col-form-label s-12">Keterangan</label>

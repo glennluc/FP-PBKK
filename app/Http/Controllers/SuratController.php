@@ -1,12 +1,14 @@
 <?php
 
 namespace App\Http\Controllers;
+
 use App\User;
 use App\Jabatan;
 use App\Bagian;
 use App\RootJabatan;
 use App\Surat;
 use Faker\Provider\File;
+use http\Env\Response;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Http\RedirectResponse;
@@ -16,12 +18,12 @@ class SuratController extends Controller
     Public function GetSurat()
     {
         $surat = DB::table('surats')
-                ->get() ;
-        return view('surat/surat', ['surat'=>$surat]);
+            ->get();
+        return view('surat/surat', ['surat' => $surat]);
     }
 
     Public function showCreateSurat()
-    {    
+    {
         return view('surat/create_surat');
     }
 
@@ -49,7 +51,7 @@ class SuratController extends Controller
 
         $file_surat = $request->file('file_surat');
         $surat->file_surat = $file_surat->getClientOriginalName();
-        $surat->file_path = $file_surat->store('public/files');
+        $surat->file_path = $file_surat->store('/storage/files');
         $nama_file = $file_surat->store('public/files');
 
         $surat->keterangan = $request->keterangan;
@@ -60,6 +62,28 @@ class SuratController extends Controller
 
         return redirect('admin/get-surat')
             ->withSuccess(sprintf('Surat berhasil dimasukkan'));
+    }
+
+    public function DownloadSurat($id)
+    {
+        $surat = DB::table('surats')->where('id_surat',$id)
+            ->first();
+        $file = public_path() . $surat->file_path;
+
+        $headers = [
+            'Content-Type' => 'application/pdf',
+        ];
+
+        return response()->download($file, $surat->file_surat, $headers);
+//        return Response::download($file, $surat->file_surat);
+//        return redirect()
+//            ->back();
+    }
+
+    public function DeleteSurat($id)
+    {
+        $user = DB::table('surats')->where('id_surat',$id)->delete();
+        return redirect('admin/get-surat');
     }
 
 }
