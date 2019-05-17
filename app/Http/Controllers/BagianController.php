@@ -38,6 +38,13 @@ class BagianController extends Controller
         return redirect('admin/get-bagian');
     }
 
+    Public function showEditBagian($id)
+    {
+    	$bagian = DB::table('bagians')
+                ->where('id_bagian',$id)->get() ;
+        return view('admin/edit_bagian', compact('bagian'));
+    }
+
     Public function UpdateBagian(Request $request)
     {
     	$bagian = array(
@@ -47,7 +54,7 @@ class BagianController extends Controller
         );
 
         DB::table('bagians')
-            ->where('id_bagian', $request->id_bagian)
+            ->where('id_bagian', $request->id)
             ->update($bagian);
 
         return redirect('admin/get-bagian');
