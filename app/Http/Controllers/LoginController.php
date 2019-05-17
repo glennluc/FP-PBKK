@@ -43,7 +43,7 @@ class LoginController extends Controller
             
             if ($user->authority == "admin")
             {
-                $current_login = $user->id_user;
+                $current_login = $user->name;
 //                dd($current_login);
                 Session::put('clog',$current_login);
                 return redirect('admin/dashboard');

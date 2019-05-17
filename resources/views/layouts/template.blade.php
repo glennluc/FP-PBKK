@@ -126,10 +126,10 @@
                             <img class="user_avatar" src="{{asset('assets/img/dummy/u2.png')}}" alt="User Image">
                         </div>
                         <div class="float-left info">
-                            @foreach ($user as $value)
-                                <h6 class="font-weight-light mt-2 mb-1">{{$value->name}}</h6>
+                            {{--@foreach ($user as $value)--}}
+                                <h6 class="font-weight-light mt-2 mb-1">{{\Illuminate\Support\Facades\Session::get('clog')}}</h6>
                                 <a href="#"><i class="icon-circle text-primary blink"></i> Online</a>
-                            @endforeach
+                            {{--@endforeach--}}
                         </div>
                     </div>
                     <div class="clearfix"></div>
