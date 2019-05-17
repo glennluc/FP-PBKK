@@ -26,6 +26,7 @@ Route::get('/admin/create-user', 'UserController@showCreateUser');
 Route::post('/admin/create-user', 'UserController@CreateUser');
 Route::get('/admin/edit-user/{id}', 'UserController@showEditUser');
 Route::post('/admin/edit-user/', 'UserController@updateUser');
+Route::get('/admin/delete-user/{id}','UserController@deleteUser');
 
 Route::get('/admin/get-bagian', 'BagianController@GetBagian');
 Route::get('/admin/create-bagian', 'BagianController@showCreateBagian');

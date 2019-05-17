@@ -39,17 +39,14 @@
                                             <label for="nik" class="col-form-label s-12">NIK</label>
                                             <input name="nik" placeholder="Masukan NIK Pegawai" class="form-control r-0 light s-12 " type="text">
                                         </div>
-
                                         <div class="form-group m-0">
                                             <label for="username" class="col-form-label s-12">Username</label>
                                             <input name="username" placeholder="Masukan Username" class="form-control r-0 light s-12 " type="text">
                                         </div>
-
                                         <div class="form-group m-0">
                                             <label for="name" class="col-form-label s-12">Nama User</label>
                                             <input name="name" placeholder="Masukkan Nama Pegawai" class="form-control r-0 light s-12 " type="text">
                                         </div>
-
                                         <div class="form-group m-0">
                                             <label for="dob" class="col-form-label s-12">Jenis Kelamin</label>
                                             <br>
@@ -62,7 +59,6 @@
                                                 <label class="custom-control-label m-2" for="female">Perempuan</label>
                                             </div>
                                         </div>
-
                                         <div class="form-row">
                                             <div class="form-group col-6 m-0">
                                                 <label for="noHP" class="col-form-label s-12">No Handphone</label>
@@ -74,30 +70,22 @@
                                                        data-format-date='Y/m/d' type="date">
                                             </div>
                                         </div>
-
                                         <div class="form-row">
                                             <div class="form-group col-6 m-0">
                                                 <label for="email" class="col-form-label s-12"><i class="icon-envelope-o mr-2"></i>Email</label>
                                                 <input name="email" placeholder="Masukkan Email Pegawai" class="form-control r-0 light s-12 " type="text">
                                             </div>
-
                                             <div class="form-group col-6 m-0">
                                                 <label for="password" class="col-form-label s-12"><i class="icon-user mr-2"></i>Password</label>
                                                 <input name="password" placeholder="Masukkan Password Pegawai" class="form-control r-0 light s-12 " type="password">
                                             </div>
                                         </div>
-
                                         <div class="form-group m-0">
                                             <label for="alamat" class="col-form-label s-12">Alamat</label>
                                             <textarea name="alamat" placeholder="Masukkan Alamat Pegawai" class="form-control r-0 light s-12 " type="text"></textarea>
                                         </div>
-
                                     </div>
-
-                                    
-
                                 </div>
-
                             </div>
                             <hr>
                             <div class="card-body">
@@ -143,10 +131,7 @@
                                         </select>
                                     </div>
                                 </div>
-
-                                
                             </div>
-                            
                             <div class="card-body">
                                 <button type="submit" class="btn btn-primary btn-lg"><i class="icon-save mr-2"></i>Save Data</button>
                             </div>

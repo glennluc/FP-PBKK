@@ -7,6 +7,8 @@ use App\Jabatan;
 use App\Bagian;
 use App\RootJabatan;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Session;
 
 class AdminController extends Controller
 {
@@ -17,7 +19,11 @@ class AdminController extends Controller
      */
     public function index()
     {
-        return view('admin/dashboard');
+        $clog = Session::get('clog');
+        $user = DB::table('users')
+            ->where('id_user',$clog)
+            ->get();
+        return view('admin/dashboard',['user'=>$user]);
     }
     
 }
