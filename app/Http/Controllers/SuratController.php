@@ -17,12 +17,12 @@ class SuratController extends Controller
     {
         $surat = DB::table('surats')
                 ->get() ;
-        return view('admin/surat', ['surat'=>$surat]);
+        return view('surat/surat', ['surat'=>$surat]);
     }
 
     Public function showCreateSurat()
     {    
-        return view('admin/create_surat');
+        return view('surat/create_surat');
     }
 
     Public function CreateSurat(Request $request)
@@ -61,12 +61,10 @@ class SuratController extends Controller
         $surat->tanggal_entry = $ldate;
         $surat->waktu_entry = $ltime;
 
-
         $surat->save();
 
-        return redirect()
-            ->back()
-            ->withSuccess(sprintf('Surat berhasil dimasukkan'));
+        return redirect('admin/get-surat');
+//            ->withSuccess(sprintf('Surat berhasil dimasukkan'));
     }
 
 }
