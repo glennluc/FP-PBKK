@@ -48,7 +48,7 @@ class UserController extends Controller
 
         $user->save();
 
-        return redirect('admin/get_user');
+        return redirect('admin/get-user');
     }
 
     public function showEditUser($id)
@@ -89,11 +89,11 @@ class UserController extends Controller
 
         return redirect('admin/get-user');
     }
-    public function DeleteUser(Request $request)
+    public function DeleteUser($id)
     {
-        $user = array();
+        $user = DB::table('users')->where('id_user',$id)->delete();
+        return redirect('admin/get-user');
     }
-
 //
 //    Public function showCreateUser($id)
 //    {
