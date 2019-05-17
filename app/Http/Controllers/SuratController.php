@@ -30,6 +30,9 @@ class SuratController extends Controller
         $this->validate($request,[
             'file' => 'required|file|max:10000'
         ]);
+        $ltime = date('Y-m-d H:i:s');
+        $ldate = date('Y-m-d');
+
         $surat = new Surat;
 
         $surat->no_surat = $request->no_surat;
@@ -55,8 +58,8 @@ class SuratController extends Controller
         ]);
 
         $surat->keterangan = $request->keterangan;
-        $surat->tanggal_entry = $request->tanggal_entry;
-        $surat->waktu_entry = $request->waktu_entry;
+        $surat->tanggal_entry = $ldate;
+        $surat->waktu_entry = $ltime;
 
 
         $surat->save();
