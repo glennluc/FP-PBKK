@@ -8,4 +8,8 @@ class Surat extends Model
 {
     protected $table = 'surats';
     protected $primaryKey = 'id_surat';
+    protected $fillable = [
+        'title',
+        'filename'
+    ];
 }

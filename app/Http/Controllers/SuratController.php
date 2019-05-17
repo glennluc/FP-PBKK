@@ -8,6 +8,7 @@ use App\RootJabatan;
 use App\Surat;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Http\RedirectResponse;
 
 class SuratController extends Controller
 {
