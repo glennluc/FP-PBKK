@@ -71,13 +71,20 @@
                                             </td>
 
                                             <td>{{$no++}}</td>
-                                            <td>{{$row->id_surat}}</td>
                                             <td>{{$row->tanggal_surat}}</td>
                                             <td>{{$row->jenis_surat}}</td>
+                                            <td>{{$row->tipe_surat}}</td>
+                                            <td>{{$row->asal_surat}}</td>
+                                            <td>{{$row->dari}}</td>
+                                            <td>{{$row->tujuan_surat_keluar}}</td>
+                                            <td>{{$row->perihal}}</td>
+                                            <td>{{$row->tembusan}}</td>
+                                            <td>{{$row->status_surat}}</td>
+                                            <td>{{$row->status_disposisi}}</td>
                                             <td>
                                                 <a href="panel-page-profile.html"><i class="icon-eye mr-3"></i></a>
-                                                <a href="{{URL('admin/edit-bagian/'.$row->id_bagian)}}"><i class="icon-pencil mr-3"></i></a>
-                                                <a href="{{URL('admin/delete-bagian/'.$row->id_bagian)}}"><i class="icon-trash"></i></a>
+                                                <a href=""><i class="icon-pencil mr-3"></i></a>
+                                                <a href=""><i class="icon-trash"></i></a>
                                             </td>
                                         </tr>
                                         <?php  }  ?>
