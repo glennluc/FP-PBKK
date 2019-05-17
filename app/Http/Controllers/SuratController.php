@@ -26,6 +26,9 @@ class SuratController extends Controller
 
     Public function CreateSurat(Request $request)
     {
+        $ltime = date('Y-m-d H:i:s');
+        $ldate = date('Y-m-d');
+
         $surat = new Surat;
 
         $surat->no_surat = $request->no_surat;
@@ -44,8 +47,8 @@ class SuratController extends Controller
         $surat->file_surat = $request->file_surat;
         $surat->file_path = $request->file_path;
         $surat->keterangan = $request->keterangan;
-        $surat->tanggal_entry = $request->tanggal_entry;
-        $surat->waktu_entry = $request->waktu_entry;
+        $surat->tanggal_entry = $ldate;
+        $surat->waktu_entry = $ltime;
 
 
         $surat->save();
