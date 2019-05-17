@@ -148,17 +148,15 @@
             </li>
             <li class="treeview no-b"><a href="#">
                 <i class="icon icon-package light-green-text s-18"></i>
-                <span>Inbox</span>
+                <span>Surat</span>
                 <span class="badge r-3 badge-success pull-right">20</span>
             </a>
                 <ul class="treeview-menu">
-                    <li><a href="panel-page-inbox.html"><i class="icon icon-circle-o"></i>All Messages</a>
+                    <li><a href="{{URL('admin/get-surat')}}"><i class="icon icon-circle-o"></i>Surat Masuk/Keluar</a>
                     </li>
-                    <li><a href="panel7-inbox.html"><i class="icon icon-circle-o"></i>Panel7 - Inbox</a>
+                    <li><a href="{{URL('admin/get-laporansurat')}}"><i class="icon icon-circle-o"></i>Laporan Surat Masuk/Keluar</a>
                     </li>
-                    <li><a href="panel8-inbox.html"><i class="icon icon-circle-o"></i>Panel8 - Inbox</a>
-                    </li>
-                    <li><a href="panel-page-inbox-create.html"><i class="icon icon-add"></i>Compose</a>
+                    <li><a href="{{URL('admin/get-disposisi')}}"><i class="icon icon-circle-o"></i>Disposisi</a>
                     </li>
                 </ul>
             </li>

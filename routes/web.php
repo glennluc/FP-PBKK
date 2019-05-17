@@ -41,3 +41,7 @@ Route::post('/admin/create-jabatan', 'JabatanController@CreateJabatan');
 Route::get('/admin/get-rootjab', 'RootJabatanController@GetRootJabatan');
 Route::get('/admin/create-rootjab', 'RootJabatanController@showCreateRootJabatan');
 Route::post('/admin/create-rootjab', 'RootJabatanController@CreateRootJabatan');
+
+Route::get('/admin/get-surat', 'SuratController@GetSurat');
+Route::get('/admin/create-surat', 'SuratController@showCreateSurat');
+Route::post('/admin/create-surat', 'SuratController@CreateSurat');
