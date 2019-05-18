@@ -1,11 +1,4 @@
 @extends('layouts.template')
-<script>
-    var msg = '{{Session::get('popup')}}';
-    var exist = '{{Session::has('popup')}}';
-    if(exist){
-        alert(msg);
-    }
-</script>
 @section('content')
 
     <header class="blue accent-3 relative">
@@ -53,7 +46,7 @@
                                             <th>Perihal</th>
                                             <th>Tembusan</th>
                                             <th>Status</th>
-                                            <th>Disposisi</th>
+                                            <th>Status Disposisi</th>
                                         </tr>
                                         </thead>
 

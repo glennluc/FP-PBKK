@@ -7,18 +7,23 @@
                 <div class="col">
                     <h4>
                         <i class="icon-database"></i>
-                        Surat
+                        Disposisi Surat
                     </h4>
                 </div>
             </div>
             <div class="row justify-content-between">
                 <ul class="nav nav-material nav-material-white responsive-tab" id="v-pills-tab" role="tablist">
                     <li>
-                        <a class="nav-link" href="{{ URL('admin/get-disposisi')}}"><i class="icon icon-home2"></i>All Disposisi</a>
+                        <a class="nav-link" href="{{ URL('admin/get-disposisi')}}"><i class="icon icon-home2"></i>All
+                            Disposisi</a>
                     </li>
                     <li class="float-right">
-                        <a class="nav-link active" href="{{ URL('admin/create-disposisi')}}"><i
-                                    class="icon icon-plus-circle"></i> Add New Disposisi</a>
+                        <a class="nav-link" href="{{ URL('admin/pilih-disposisi')}}"><i
+                                    class="icon icon-plus-circle"></i> Lihat Surat</a>
+                    </li>
+                    <li class="float-right">
+                        <a class="nav-link active" href="{{ URL('#')}}"><i
+                                    class="icon icon-plus-circle"></i>Edit Disposisi</a>
                     </li>
                 </ul>
             </div>
@@ -36,49 +41,71 @@
                                 <div class="card-body">
                                     <h5 class="card-title">Edit Disposisi</h5>
                                     <div class="form-row">
-                                     @foreach ($disposisi as $value)
-                                     @endforeach
                                         <div class="col-md-8">
-                                            
+                                            <input name="id_disposisi" class="form-control r-0 light s-12 " type="hidden"
+                                                   value="{{$disposisi->id_disposisi}}">
+                                            <input name="id_surats" class="form-control r-0 light s-12 " type="hidden"
+                                                   value="{{$disposisi->id_surats}}">
                                             <div class="form-group m-0">
-                                                <label for="id_surats" class="col-form-label s-12">ID Surat</label>
-                                                <select name="id_surats" class="form-control r-0 light s-12" required="">
-                                                    <option value="{{$value->id_surats}}">{{$value->id_surats}}</option>
-                                                    <?php  foreach ($surat as $value) : ?>
-                                                    <option value="{{$value->id_surat}}">{{$value->id_surat}}</option>
-                                                    <?php endforeach; ?>
-                                                </select>
+                                                <div class="col-6" style="float: left;overflow: hidden;">
+                                                    <label for="no_surat" class="col-form-label s-12">No Surat</label>
+                                                    <input name="no_surat" class="form-control r-0 light s-12 "
+                                                           value="{{$disposisi->no_surat}}" type="text">
+                                                </div>
+                                                <div class="col-6" style="float: right;overflow: hidden;">
+                                                    <label for="id_surats" class="col-form-label s-12">ID Surat</label>
+                                                    <input name="id_surat" class="form-control r-0 light s-12 "
+                                                           value="{{$disposisi->id_surats}}" type="text">
+                                                </div>
                                             </div>
                                             <div class="form-group m-0">
-                                                <label for="dari" class="col-form-label s-12">Dari</label>
-                                                <input name="dari" class="form-control r-0 light s-12 " type="text">
+                                                <label for="untuk" class="col-form-label s-12">Kepada</label>
+                                                <input name="untuk" class="form-control r-0 light s-12 " type="hidden"
+                                                       value="{{$disposisi->id_user}}">
+                                                <input class="form-control r-0 light s-12 " type="text"
+                                                       value="{{$disposisi->name}}" readonly>
                                             </div>
                                             <div class="form-group m-0">
-                                                <label for="untuk" class="col-form-label s-12">Untuk</label>
-                                                <input name="untuk" class="form-control r-0 light s-12 " type="text">
+                                                <label for="dari" class="col-form-label s-12">Oleh</label>
+                                                <input name="dari" class="form-control r-0 light s-12 " type="text"
+                                                       value="{{$disposisi->dari}}">
                                             </div>
                                             <div class="form-group m-0">
-                                                <label for="disposisi_status" class="col-form-label s-12">Disposisi Status</label>
-                                                <input name="disposisi_status" class="form-control r-0 light s-12 " type="text">
+                                                <label for="disposisi_status" class="col-form-label s-12">Disposisi
+                                                    Status</label>
+                                                <input name="disposisi_status" class="form-control r-0 light s-12 "
+                                                       type="text" value="{{$disposisi->disposisi_status}}">
                                             </div>
                                             <div class="form-group m-0">
-                                                <label for="status_surat_disposisi" class="col-form-label s-12">Status Surat Disposisi</label>
-                                                <input name="status_surat_disposisi" class="form-control r-0 light s-12 " type="text">
+                                                <label for="status_surat_disposisi" class="col-form-label s-12">Status
+                                                    Surat Disposisi</label>
+                                                <input name="status_surat_disposisi"
+                                                       class="form-control r-0 light s-12 " type="text"
+                                                       value="{{$disposisi->status_surat_disposisi}}">
                                             </div>
                                             <div class="form-group m-0">
-                                                <label for="tipe_surat_disposisi" class="col-form-label s-12">Tipe Surat Disposisi</label>
+                                                <label for="tipe_surat_disposisi" class="col-form-label s-12">Tipe Surat
+                                                    Disposisi</label>
                                                 <select name="tipe_surat_disposisi" class="form-control r-0 light s-12"
                                                         required="">
-                                                    <option value="internal">internal</option>
-                                                    <option value="eksternal">eksternal</option>
+                                                    @if($disposisi->tipe_surat_disposisi == 'internal')
+                                                        <option value="internal" selected>internal</option>
+                                                        <option value="eksternal">eksternal</option>
+                                                    @elseif($disposisi->tipe_surat_disposisi == 'eksternal')
+                                                        <option value="internal">internal</option>
+                                                        <option value="eksternal" selected>eksternal</option>
+                                                    @else
+                                                        <option value="internal">internal</option>
+                                                        <option value="eksternal">eksternal</option>
+                                                    @endif
                                                 </select>
                                             </div>
 
                                         </div>
-                                        
+
                                     </div>
-                                </div>  
-                            
+                                </div>
+
                             </div>
                             <hr>
                             <div class="card-body">

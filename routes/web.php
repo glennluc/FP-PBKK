@@ -54,9 +54,10 @@ Route::get('admin/get-arsipsurat', 'SuratController@GetArsipSurat');
 
 
 Route::get('/admin/get-disposisi', 'DisposisiController@GetDisposisi');
-Route::get('/admin/create-disposisi', 'DisposisiController@showCreateDisposisi');
+Route::get('/admin/create-disposisi/{id}', 'DisposisiController@showCreateDisposisi');
 Route::post('/admin/create-disposisi', 'DisposisiController@CreateDisposisi');
 Route::get('/admin/edit-disposisi/{id}', 'DisposisiController@showEditDisposisi');
 Route::post('/admin/edit-disposisi/', 'DisposisiController@updateDisposisi');
 Route::get('/admin/delete-disposisi/{id}','DisposisiController@deleteDisposisi');
+Route::get('/admin/pilih-disposisi','DisposisiController@pilihDisposisi');
 

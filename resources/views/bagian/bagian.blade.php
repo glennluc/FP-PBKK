@@ -16,7 +16,7 @@
                 <ul class="nav nav-material nav-material-white responsive-tab" id="v-pills-tab" role="tablist">
                     <li>
                         <a class="nav-link active" id="v-pills-all-tab" data-toggle="pill" href="{{ URL('admin/get-bagian')}}"
-                           role="tab" aria-controls="v-pills-all"><i class="icon icon-home2"></i>Manage Bagian</a>
+                           role="tab" aria-controls="v-pills-all"><i class="icon icon-home2"></i>Atur Bagian</a>
                     </li>
                     <li class="float-right">
                         <a class="nav-link"  href="{{ URL('admin/create-bagian')}}" ><i class="icon icon-plus-circle"></i> Tambah Bagian</a>
