@@ -17,7 +17,7 @@
                         <a class="nav-link" href="{{ URL('admin/get-disposisi')}}"><i class="icon icon-home2"></i>All Disposisi</a>
                     </li>
                     <li class="float-right">
-                        <a class="nav-link active" href="{{ URL('admin/create-surat')}}"><i
+                        <a class="nav-link active" href="{{ URL('admin/create-disposisi')}}"><i
                                     class="icon icon-plus-circle"></i> Add New Disposisi</a>
                     </li>
                 </ul>
@@ -28,24 +28,27 @@
         <div class="animated fadeInUpShort">
             <div class="row my-3">
                 <div class="col-md-7  offset-md-2">
-                    <form accept-charset="UTF-8" role="form" action="{{ URl('admin/create-disposisi') }}" method="post"
+                    <form accept-charset="UTF-8" role="form" action="{{ URl('admin/edit-disposisi') }}" method="post"
                           enctype="multipart/form-data">
                         <fieldset>
                             @csrf
                             <div class="card no-b  no-r">
                                 <div class="card-body">
-                                    <h5 class="card-title">Add Disposisi</h5>
+                                    <h5 class="card-title">Edit Disposisi</h5>
                                     <div class="form-row">
+                                     
                                         <div class="col-md-8">
+                                            
                                             <div class="form-group m-0">
                                                 <label for="id_surats" class="col-form-label s-12">ID Surat</label>
                                                 <select name="id_surats" class="form-control r-0 light s-12" required="">
-                                                        <option>ID Surat</option>
+                                                    <option value="{{$value->no_surat}}">{{$value->no_surat}}</option>
                                                     <?php  foreach ($surat as $value) : ?>
-                                                        <option value="{{$value->id_surat}}">{{$value->no_surat}}</option>
+                                                    <option value="{{$value->id_surat}}">{{$value->id_surat}}</option>
                                                     <?php endforeach; ?>
-                                        </select>
+                                                </select>
                                             </div>
+                                            
                                             <div class="form-group m-0">
                                                 <label for="dari" class="col-form-label s-12">Dari</label>
                                                 <input name="dari" class="form-control r-0 light s-12 " type="text">
@@ -70,10 +73,12 @@
                                                     <option value="eksternal">eksternal</option>
                                                 </select>
                                             </div>
-                                        </div>
-                                    </div>
-                                </div>
 
+                                        </div>
+                                        
+                                    </div>
+                                </div>  
+                            
                             </div>
                             <hr>
                             <div class="card-body">
