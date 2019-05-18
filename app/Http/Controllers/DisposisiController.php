@@ -25,8 +25,11 @@ class DisposisiController extends Controller
 
     Public function showCreateDisposisi()
     {   
+        $disposisi = DB::table('disposisi_surats')
+                ->join('surats', 'disposisi_surats.id_surats', '=', 'surats.id_surat')
+                ->get() ;
         $surat = Surat::all(); 
-        return view('disposisi/create_disposisi', compact('surat'));
+        return view('disposisi/create_disposisi', compact('disposisi', 'surat'));
     }
 
     Public function CreateDisposisi(Request $request)

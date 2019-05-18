@@ -44,6 +44,7 @@
                                                 </div>
                                             </th>
                                             <th>No</th>
+                                            <th>ID Surat</th>
                                             <th>No Surat</th>
                                             <th>Dari</th>
                                             <th>Untuk</th>
@@ -70,6 +71,7 @@
                                             </td>
 
                                             <td>{{$no++}}</td>
+                                            <td>{{$row->id_surats}}</td>
                                             <td>{{$row->no_surat}}</td>
                                             <td>{{$row->dari}}</td>
                                             <td>{{$row->untuk}}</td>

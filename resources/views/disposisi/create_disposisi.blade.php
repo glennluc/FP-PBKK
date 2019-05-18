@@ -42,7 +42,7 @@
                                                 <select name="id_surats" class="form-control r-0 light s-12" required="">
                                                         <option>ID Surat</option>
                                                     <?php  foreach ($surat as $value) : ?>
-                                                        <option value="{{$value->id_surat}}">{{$value->no_surat}}</option>
+                                                        <option value="{{$value->id_surat}}">{{$value->id_surat}}</option>
                                                     <?php endforeach; ?>
                                         </select>
                                             </div>

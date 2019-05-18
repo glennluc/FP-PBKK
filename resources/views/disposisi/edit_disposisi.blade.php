@@ -36,19 +36,19 @@
                                 <div class="card-body">
                                     <h5 class="card-title">Edit Disposisi</h5>
                                     <div class="form-row">
-                                     
+                                     @foreach ($disposisi as $value)
+                                     @endforeach
                                         <div class="col-md-8">
                                             
                                             <div class="form-group m-0">
                                                 <label for="id_surats" class="col-form-label s-12">ID Surat</label>
                                                 <select name="id_surats" class="form-control r-0 light s-12" required="">
-                                                    <option value="{{$value->no_surat}}">{{$value->no_surat}}</option>
+                                                    <option value="{{$value->id_surats}}">{{$value->id_surats}}</option>
                                                     <?php  foreach ($surat as $value) : ?>
                                                     <option value="{{$value->id_surat}}">{{$value->id_surat}}</option>
                                                     <?php endforeach; ?>
                                                 </select>
                                             </div>
-                                            
                                             <div class="form-group m-0">
                                                 <label for="dari" class="col-form-label s-12">Dari</label>
                                                 <input name="dari" class="form-control r-0 light s-12 " type="text">
