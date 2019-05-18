@@ -28,7 +28,8 @@ class LaporanController extends Controller
         $sampaiTanggal = $request->sampaiTanggal;
         $tipeSurat = $request->tipeSurat;
 
-//        $sampaiTanggal = date('Y-m-d');
+        $sampaiTanggal = date('Y-m-d');
+        dd(date('Y-m-d'));
 
         if ($dariTanggal = null && $sampaiTanggal != null && $tipeSurat != null)
             $surat = DB::table('surats')
@@ -44,6 +45,9 @@ class LaporanController extends Controller
             $surat = DB::table('surats')
                 ->whereDate('tanggal_surat', '>=', $dariTanggal)
                 ->whereDate('tanggal_surat', '<=', $sampaiTanggal)
+                ->get();
+        elseif ($dariTanggal = null && $sampaiTanggal = null && $tipeSurat = null)
+            $surat = DB::table('surats')
                 ->get();
         else
             $surat = DB::table('surats')
