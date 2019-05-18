@@ -187,7 +187,7 @@
                         <li><a href="{{URL('admin/get-surat')}}"><i class="icon icon-circle-o"></i>Surat
                                 Masuk/Keluar</a>
                         </li>
-                        <li><a href="{{URL('admin/get-laporansurat')}}"><i class="icon icon-circle-o"></i>Laporan Surat
+                        <li><a href="{{URL('admin/get-laporan')}}"><i class="icon icon-circle-o"></i>Laporan Surat
                                 Masuk/Keluar</a>
                         </li>
                         <li><a href="{{URL('admin/get-arsipsurat')}}"><i class="icon icon-circle-o"></i>Arsip Surat</a>

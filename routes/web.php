@@ -60,3 +60,6 @@ Route::get('/admin/edit-disposisi/{id}', 'DisposisiController@showEditDisposisi'
 Route::post('/admin/edit-disposisi/', 'DisposisiController@updateDisposisi');
 Route::get('/admin/delete-disposisi/{id}','DisposisiController@deleteDisposisi');
 
+Route::get('/admin/get-laporan', 'LaporanController@GetLaporan');
+Route::post('/admin/show-laporan/', 'LaporanController@ShowLaporan');
+
