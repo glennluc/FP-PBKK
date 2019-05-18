@@ -18,7 +18,7 @@ class SuratController extends Controller
     Public function GetSurat()
     {
         $surat = DB::table('surats')
-            ->where('arsip_status','0')
+            ->where('arsip_status', '0')
             ->get();
         return view('surat/surat', ['surat' => $surat]);
     }
@@ -26,7 +26,7 @@ class SuratController extends Controller
     Public function GetArsipSurat()
     {
         $surat = DB::table('surats')
-            ->where('arsip_status','1')
+            ->where('arsip_status', '1')
             ->get();
         return view('surat/suratarsip', ['surat' => $surat]);
     }
@@ -34,9 +34,9 @@ class SuratController extends Controller
     Public function showCreateSurat()
     {
         $surat = DB::table('surats')
-            ->orderBy('id_surat','desc')
+            ->orderBy('id_surat', 'desc')
             ->first();
-        return view('surat/create_surat',compact('surat'));
+        return view('surat/create_surat', compact('surat'));
     }
 
     Public function CreateSurat(Request $request)
@@ -73,14 +73,14 @@ class SuratController extends Controller
         $surat->save();
 
         return redirect('admin/get-surat')
-            ->withSuccess(sprintf('Surat berhasil dimasukkan'));
+            ->with('popup','Berhasil Memasukkan Surat');
     }
 
     public function DownloadSurat($id)
     {
-        $surat = DB::table('surats')->where('id_surat',$id)
+        $surat = DB::table('surats')->where('id_surat', $id)
             ->first();
-        $file = public_path(). '/' . $surat->file_path;
+        $file = public_path() . '/' . $surat->file_path;
 
         $headers = [
             'Content-Type' => 'application/pdf',
@@ -91,17 +91,25 @@ class SuratController extends Controller
 
     public function DeleteSurat($id)
     {
-        $user = DB::table('surats')->where('id_surat',$id)->delete();
-        return redirect('admin/get-surat');
+        $user = DB::table('surats')->where('id_surat', $id)->delete();
+        return redirect('admin/get-surat')->with('popup','Berhasil Menghapus Surat');
     }
 
     public function ArsipSurat($id)
     {
         DB::table('surats')
             ->where('id_surat', $id)
-            ->update(['arsip_status'=>1]);
+            ->update(['arsip_status' => 1]);
+        return redirect('admin/get-surat')->with('popup','Berhasil Mengarsipkan Surat');
+    }
 
-        return redirect('admin/get-surat')->with('popup','open');
+    public function PulihSurat($id)
+    {
+        DB::table('surats')
+            ->where('id_surat', $id)
+            ->update(['arsip_status' => 0]);
+
+        return redirect('admin/get-arsipsurat')->with('popup', 'Berhasil Memulihkan surat');
     }
 
 }

@@ -1,5 +1,11 @@
 @extends('layouts.template')
-
+<script>
+    var msg = '{{Session::get('popup')}}';
+    var exist = '{{Session::has('popup')}}';
+    if(exist){
+        alert(msg);
+    }
+</script>
 @section('content')
 
     <header class="blue accent-3 relative">
@@ -17,11 +23,7 @@
                     <li>
                         <a class="nav-link active" id="v-pills-all-tab" data-toggle="pill"
                            href="{{ URL('admin/get-bagian')}}"
-                           role="tab" aria-controls="v-pills-all"><i class="icon icon-home2"></i>Manage Surat</a>
-                    </li>
-                    <li class="float-right">
-                        <a class="nav-link" href="{{ URL('admin/create-surat')}}"><i class="icon icon-plus-circle"></i>
-                            Tambah Surat</a>
+                           role="tab" aria-controls="v-pills-all"><i class="icon icon-home2"></i>Surat yang di Arsipkan</a>
                     </li>
                 </ul>
             </div>
@@ -73,8 +75,8 @@
                                             <td>{{$row->status_surat}}</td>
                                             <td>{{$row->status_disposisi}}</td>
                                             <td>
-                                                <a href="{{URL('admin/arsip-surat/'.$row->id_surat)}}"><i
-                                                            class="icon-archive2 mr-3"></i></a>
+                                                <a href="{{URL('admin/pulih-surat/'.$row->id_surat)}}"><i
+                                                            class="icon-archive mr-3"></i></a>
                                                 <a href="{{URL('admin/download-surat/'.$row->id_surat)}}"><i
                                                             class="icon-eye mr-3"></i></a>
                                                 <a href="{{URL('admin/delete-surat/'.$row->id_surat)}}"><i

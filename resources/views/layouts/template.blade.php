@@ -9,6 +9,8 @@
     <title>SI Surat</title>
     <!-- CSS -->
     <link rel="stylesheet" href="{{ asset('assets/css/app.css') }}">
+    <link rel="stylesheet" type="text/css"
+          href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.css">
     <style>
         .loader {
             position: fixed;
@@ -127,8 +129,8 @@
                         </div>
                         <div class="float-left info">
                             {{--@foreach ($user as $value)--}}
-                                <h6 class="font-weight-light mt-2 mb-1">{{\Illuminate\Support\Facades\Session::get('clog')}}</h6>
-                                <a href="#"><i class="icon-circle text-primary blink"></i> Online</a>
+                            <h6 class="font-weight-light mt-2 mb-1">{{\Illuminate\Support\Facades\Session::get('clog')}}</h6>
+                            <a href="#"><i class="icon-circle text-primary blink"></i> Online</a>
                             {{--@endforeach--}}
                         </div>
                     </div>
@@ -172,7 +174,8 @@
                         <li><a href="{{URL('admin/get-user')}}"><i class="icon icon-circle-o"></i>User</a></li>
                         <li><a href="{{URL('admin/get-bagian')}}"><i class="icon icon-circle-o"></i>Bagian</a></li>
                         <li><a href="{{URL('admin/get-jabatan')}}"><i class="icon icon-circle-o"></i>Jabatan</a></li>
-                        <li><a href="{{URL('admin/get-rootjab')}}"><i class="icon icon-circle-o"></i>Root Jabatan</a></li>
+                        <li><a href="{{URL('admin/get-rootjab')}}"><i class="icon icon-circle-o"></i>Root Jabatan</a>
+                        </li>
                     </ul>
                 </li>
                 <li class="treeview no-b"><a href="#">
@@ -181,9 +184,11 @@
                         <span class="badge r-3 badge-success pull-right">20</span>
                     </a>
                     <ul class="treeview-menu">
-                        <li><a href="{{URL('admin/get-surat')}}"><i class="icon icon-circle-o"></i>Surat Masuk/Keluar</a>
+                        <li><a href="{{URL('admin/get-surat')}}"><i class="icon icon-circle-o"></i>Surat
+                                Masuk/Keluar</a>
                         </li>
-                        <li><a href="{{URL('admin/get-laporansurat')}}"><i class="icon icon-circle-o"></i>Laporan Surat Masuk/Keluar</a>
+                        <li><a href="{{URL('admin/get-laporansurat')}}"><i class="icon icon-circle-o"></i>Laporan Surat
+                                Masuk/Keluar</a>
                         </li>
                         <li><a href="{{URL('admin/get-arsipsurat')}}"><i class="icon icon-circle-o"></i>Arsip Surat</a>
                         </li>
@@ -210,29 +215,30 @@
         </div>
 
     </section>
-</aside>
+    </aside>
 @yield('content')
 
-    <!-- Add the sidebar's background. This div must be placed
+<!-- Add the sidebar's background. This div must be placed
          immediately after the control sidebar -->
-        <div class="control-sidebar-bg shadow white fixed"></div>
-    </div>
-    <!--/#app -->
-    <script src="{{asset('assets/js/app.js')}}"></script>
+    <div class="control-sidebar-bg shadow white fixed"></div>
+</div>
+<!--/#app -->
+<script src="{{asset('assets/js/app.js')}}"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.js"></script>
 
 
-    <!--
-    --- Footer Part - Use Jquery anywhere at page.
-    --- http://writing.colin-gourlay.com/safely-using-ready-before-including-jquery/
-    -->
-    <script>(function ($, d) {
-            $.each(readyQ, function (i, f) {
-                $(f)
-            });
-            $.each(bindReadyQ, function (i, f) {
-                $(d).bind("ready", f)
-            })
-        })(jQuery, document)</script>
+<!--
+--- Footer Part - Use Jquery anywhere at page.
+--- http://writing.colin-gourlay.com/safely-using-ready-before-including-jquery/
+-->
+<script>(function ($, d) {
+        $.each(readyQ, function (i, f) {
+            $(f)
+        });
+        $.each(bindReadyQ, function (i, f) {
+            $(d).bind("ready", f)
+        })
+    })(jQuery, document)</script>
 </body>
 </html>
 
