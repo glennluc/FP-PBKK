@@ -17,13 +17,16 @@ class DisposisiController extends Controller
     Public function GetDisposisi()
     {
         $disposisi = DB::table('disposisi_surats')
+                ->join('surats', 'disposisi_surats.id_surats', '=', 'surats.id_surat')
                 ->get() ;
-        return view('disposisi/disposisi', ['disposisi'=>$disposisi]);
+        $surat = Surat::all(); 
+        return view('disposisi/disposisi', compact('disposisi', 'surat'));
     }
 
     Public function showCreateDisposisi()
-    {    
-        return view('disposisi/create_disposisi');
+    {   
+        $surat = Surat::all(); 
+        return view('disposisi/create_disposisi', compact('surat'));
     }
 
     Public function CreateDisposisi(Request $request)
@@ -36,6 +39,7 @@ class DisposisiController extends Controller
 
         $disposisi->dari = $request->dari;
         $disposisi->untuk = $request->untuk;
+        $disposisi->id_surats = $request->id_surats;
         $disposisi->disposisi_status = $request->disposisi_status;
         $disposisi->status_surat_disposisi = $request->status_surat_disposisi;
         $disposisi->tipe_surat_disposisi = $request->tipe_surat_disposisi;
@@ -46,6 +50,15 @@ class DisposisiController extends Controller
 
         return redirect('admin/get-disposisi')
             ->withSuccess(sprintf('Surat berhasil dimasukkan'));
+    }
+
+    Public function showEditDisposisi($id)
+    {
+        $disposisi = DB::table('disposisi_surats')
+                ->join('surats', 'disposisi_surats.id_surats', '=', 'surats.id_surat')
+                ->get() ;
+        $surat = Surat::all(); 
+        return view('disposisi/edit_disposisi', compact('disposisi', 'surat'));
     }
 
 }

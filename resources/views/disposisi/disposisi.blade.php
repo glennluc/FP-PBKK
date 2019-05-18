@@ -44,6 +44,7 @@
                                                 </div>
                                             </th>
                                             <th>No</th>
+                                            <th>No Surat</th>
                                             <th>Dari</th>
                                             <th>Untuk</th>
                                             <th>Disposisi Status</th>
@@ -69,6 +70,7 @@
                                             </td>
 
                                             <td>{{$no++}}</td>
+                                            <td>{{$row->no_surat}}</td>
                                             <td>{{$row->dari}}</td>
                                             <td>{{$row->untuk}}</td>
                                             <td>{{$row->disposisi_status}}</td>
@@ -78,7 +80,7 @@
                                             <td>{{$row->waktu_disposisi}}</td>
                                             <td>
                                                 <a href="panel-page-profile.html"><i class="icon-eye mr-3"></i></a>
-                                                <a href=""><i class="icon-pencil mr-3"></i></a>
+                                                <a href="{{URL('admin/edit-disposisi/'.$row->id_disposisi)}}"><i class="icon-pencil mr-3"></i></a>
                                                 <a href=""><i class="icon-trash"></i></a>
                                             </td>
                                         </tr>

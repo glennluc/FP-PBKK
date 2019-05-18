@@ -43,7 +43,7 @@
                                                         class="custom-control-label" for="checkedAll"></label>
                                                 </div>
                                             </th>
-                                            <th>No</th>
+                                            <th>Nomor Surat</th>
                                             <th>Tanggal</th>
                                             <th>Jenis</th>
                                             <th>Tipe</th>
@@ -70,7 +70,7 @@
                                                 </div>
                                             </td>
 
-                                            <td>{{$no++}}</td>
+                                            <td>{{$row->no_surat}}</td>
                                             <td>{{$row->tanggal_surat}}</td>
                                             <td>{{$row->jenis_surat}}</td>
                                             <td>{{$row->tipe_surat}}</td>
