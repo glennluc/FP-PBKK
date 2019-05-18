@@ -24,7 +24,10 @@ class SuratController extends Controller
 
     Public function showCreateSurat()
     {
-        return view('surat/create_surat');
+        $surat = DB::table('surats')
+            ->orderBy('id_surat','desc')
+            ->first();
+        return view('surat/create_surat',compact('surat'));
     }
 
     Public function CreateSurat(Request $request)

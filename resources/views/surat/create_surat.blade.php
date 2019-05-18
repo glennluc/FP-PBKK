@@ -39,7 +39,17 @@
                                         <div class="col-md-8">
                                             <div class="form-group m-0">
                                                 <label for="no_surat" class="col-form-label s-12">Nomor Surat</label>
-                                                <input name="no_surat" class="form-control r-0 light s-12 " type="text">
+                                                {{$date = \Carbon\Carbon::now()}}
+                                                {{$date->format('YmdH')}}
+                                                @if($date->month < 10)
+                                                    <input name="no_surat" class="form-control r-0 light s-12 "
+                                                           value="{{$surat->id_surat+1 .'/TC.0' . $date->month . '/' . $date->year}}"
+                                                           readonly>
+                                                @else
+                                                    <input name="no_surat" class="form-control r-0 light s-12 "
+                                                           value="{{$surat->id_surat+1 .'/TC.' . $date->month . '/' . $date->year}}"
+                                                           readonly>
+                                                @endif
                                             </div>
                                             <div class="form-group m-0">
                                                 <label for="tanggal_surat" class="col-form-label s-12">Tanggal
