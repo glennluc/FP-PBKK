@@ -17,6 +17,9 @@
                         <a class="nav-link" href="{{ URL('admin/get-bagian')}}"><i class="icon icon-home2"></i>All Bagian</a>
                     </li>
                     <li class="float-right">
+                        <a class="nav-link"  href="{{ URL('admin/create-user')}}" ><i class="icon icon-plus-circle"></i> Tambah Bagian</a>
+                    </li>
+                    <li class="float-right">
                         <a class="nav-link active"  href="{{ URL('admin/edit-bagian')}}" ><i class="icon icon-plus-circle"></i> Edit Bagian</a>
                     </li>
                 </ul>

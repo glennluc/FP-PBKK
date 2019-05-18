@@ -225,6 +225,13 @@
 <!--/#app -->
 <script src="{{asset('assets/js/app.js')}}"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.js"></script>
+<script>
+    var msg = '{{Session::get('popup')}}';
+    var exist = '{{Session::has('popup')}}';
+    if(exist){
+        alert(msg);
+    }
+</script>
 
 
 <!--
