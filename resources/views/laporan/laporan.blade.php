@@ -2,7 +2,7 @@
 <script>
     var msg = '{{Session::get('popup')}}';
     var exist = '{{Session::has('popup')}}';
-    if(exist){
+    if (exist) {
         alert(msg);
     }
 </script>
@@ -29,7 +29,6 @@
             </div>
         </div>
     </header>
-
     <div class="container-fluid animatedParent animateOnce">
         <div class="tab-content my-3" id="v-pills-tabContent">
             <div class="tab-pane animated fadeInUpShort show active" id="v-pills-all" role="tabpanel"
@@ -38,43 +37,53 @@
                     <div class="col-md-12">
                         <div class="card r-0 shadow">
                             <div class="table-responsive">
-                                <form>
-                                    <div class="container">
-                                      <div class="row">
-                                        <form id="search" role="form" style="border:0">
-                                          <div class="col-md-4">
-                                            <ul class="nav nav-stacked">
-                                              <label for="dariTanggal" class="col-form-label s-12">Dari Tanggal</label>
-                                                <input type="date" name="dariTanggal" class="form-control" id="dateFrom" />
-                                            </ul>
-                                          </div>
-
-                                          <div class="col-md-4">
-                                            <ul class="nav nav-stacked">
-                                              <label for="sampaiTanggal" class="col-form-label s-12">Sampai Tanggal</label>
-                                                <input type="date" name="sampaiTanggal"  class="form-control" id="dateTo" />
-                                            </ul>
-                                          </div>
-
-                                          <div class="col-md-4">
-                                            <ul class="nav nav-stacked">
-                                              <label for="tipe_surat" class="col-form-label s-12">Tipe Surat</label>
-                                                <select name="tipe_surat" class="form-control r-0 light s-12" required="">
-                                                    <option>Pilih Tipe Surat</option>
-                                                    <option value="internal">Internal</option>
-                                                    <option value="eksternal">Eksternal</option>
-                                                    <option value="keluar">Keluar</option>
-                                                </select>
-                                            </ul>
-                                          </div>
-
-                                          <div class="col-md-4">
-                                                <a href="{{ URL('admin/show-laporan')}}">
-                                                    <button class="btn btn-primary" type="button" id="getJsonSrc">Search</button>
-                                                </a>
-                                          </div>
+                                <div class="container">
+                                    <div class="row">
+                                        <form accept-charset="UTF-8" role="form"
+                                              action="{{ URl('admin/show-laporan') }}" method="post"
+                                              enctype="multipart/form-data">
+                                            <fieldset>
+                                                @csrf
+                                                <div style="justify-content: center">
+                                                    <div class="col-md-4" style="float: left;overflow: hidden;">
+                                                        <ul class="nav nav-stacked">
+                                                            <label for="dariTanggal" class="col-form-label s-12">Dari
+                                                                Tanggal</label>
+                                                            <input type="date" name="dariTanggal" class="form-control"
+                                                                   id="dateFrom"/>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="col-md-4" style="float: left;overflow: hidden;">
+                                                        <ul class="nav nav-stacked">
+                                                            <label for="sampaiTanggal" class="col-form-label s-12">Sampai
+                                                                Tanggal</label>
+                                                            <input type="date" name="sampaiTanggal" class="form-control"
+                                                                   id="dateTo"/>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="col-md-4" style="float: left;overflow: hidden;">
+                                                        <ul class="nav nav-stacked">
+                                                            <label for="tipeSurat" class="col-form-label s-12">Tipe
+                                                                Surat</label>
+                                                            <select name="tipeSurat"
+                                                                    class="form-control r-0 light s-12"
+                                                                    required="">
+                                                                <option>Pilih Tipe Surat</option>
+                                                                <option value="internal">Internal</option>
+                                                                <option value="eksternal">Eksternal</option>
+                                                                <option value="keluar">Keluar</option>
+                                                            </select>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4" style="margin-top: 60pt">
+                                                    <button class="btn btn-primary" type="submit" id="getJsonSrc">
+                                                        Search
+                                                    </button>
+                                                </div>
+                                            </fieldset>
                                         </form>
-                                      </div>
+                                    </div>
                                     <table class="table table-striped table-hover r-0">
                                         <thead>
                                         <tr class="no-b">
@@ -115,7 +124,7 @@
 
                                         </tbody>
                                     </table>
-                                </form>
+                                </div>
                             </div>
                         </div>
                     </div>

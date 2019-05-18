@@ -100,12 +100,9 @@
                                                     @endif
                                                 </select>
                                             </div>
-
                                         </div>
-
                                     </div>
                                 </div>
-
                             </div>
                             <hr>
                             <div class="card-body">
