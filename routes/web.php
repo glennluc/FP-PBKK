@@ -46,7 +46,10 @@ Route::post('/admin/create-rootjab', 'RootJabatanController@CreateRootJabatan');
 Route::get('/admin/get-surat', 'SuratController@GetSurat');
 Route::get('/admin/create-surat', 'SuratController@showCreateSurat');
 Route::post('/admin/create-surat', 'SuratController@CreateSurat');
-
+Route::get('admin/download-surat/{id}', 'SuratController@DownloadSurat');
+Route::get('/admin/delete-surat/{id}', 'SuratController@DeleteSurat');
+Route::get('admin/arsip-surat/{id}', 'SuratController@ArsipSurat');
+Route::get('admin/get-arsipsurat', 'SuratController@GetArsipSurat');
 
 Route::get('/admin/get-disposisi', 'DisposisiController@GetDisposisi');
 Route::get('/admin/create-disposisi', 'DisposisiController@showCreateDisposisi');
@@ -54,7 +57,4 @@ Route::post('/admin/create-disposisi', 'DisposisiController@CreateDisposisi');
 Route::get('/admin/edit-disposisi/{id}', 'DisposisiController@showEditDisposisi');
 Route::post('/admin/edit-disposisi/', 'DisposisiController@updateDisposisi');
 Route::get('/admin/delete-disposisi/{id}','DisposisiController@deleteDisposisi');
-
-Route::get('admin/download-surat/{id}', 'SuratController@DownloadSurat');
-Route::get('/admin/delete-surat/{id}', 'SuratController@DeleteSurat');
 

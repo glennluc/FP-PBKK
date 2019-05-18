@@ -18,13 +18,25 @@ class SuratController extends Controller
     Public function GetSurat()
     {
         $surat = DB::table('surats')
+            ->where('arsip_status','0')
             ->get();
         return view('surat/surat', ['surat' => $surat]);
     }
 
+    Public function GetArsipSurat()
+    {
+        $surat = DB::table('surats')
+            ->where('arsip_status','1')
+            ->get();
+        return view('surat/suratarsip', ['surat' => $surat]);
+    }
+
     Public function showCreateSurat()
     {
-        return view('surat/create_surat');
+        $surat = DB::table('surats')
+            ->orderBy('id_surat','desc')
+            ->first();
+        return view('surat/create_surat',compact('surat'));
     }
 
     Public function CreateSurat(Request $request)
@@ -75,15 +87,21 @@ class SuratController extends Controller
         ];
 
         return response()->download($file, $surat->file_surat, $headers);
-//        return Response::download($file, $surat->file_surat);
-//        return redirect()
-//            ->back();
     }
 
     public function DeleteSurat($id)
     {
         $user = DB::table('surats')->where('id_surat',$id)->delete();
         return redirect('admin/get-surat');
+    }
+
+    public function ArsipSurat($id)
+    {
+        DB::table('surats')
+            ->where('id_surat', $id)
+            ->update(['arsip_status'=>1]);
+
+        return redirect('admin/get-surat')->with('popup','open');
     }
 
 }
