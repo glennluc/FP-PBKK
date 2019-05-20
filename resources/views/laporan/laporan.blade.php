@@ -77,12 +77,14 @@
                                                     </div>
                                                 </div>
                                                 <div class="col-md-4" style="margin-top: 60pt">
-                                                    <button class="btn btn-primary" type="submit" id="getJsonSrc">
+                                                    <button class="btn btn-primary" type="submit" name="excel" value="display">
                                                         Search
                                                     </button>
+                                                    <button class="btn btn-primary" type="submit" name="excel" value="export">Export Excel</button>
+                                                    {{--<a class="btn btn-primary" href="{{ URL('admin/export-laporan')}}" style="margin-left: 2pt">Export--}}
+                                                        {{--Excel</a>--}}
                                                 </div>
-                                                <div class="col-md-1" style="margin-top: 60pt">
-                                                    <a href="{{ URL('admin/export-laporan')}}">Export Excel</a>
+                                                <div class="col-md-1">
                                                 </div>
                                             </fieldset>
                                         </form>

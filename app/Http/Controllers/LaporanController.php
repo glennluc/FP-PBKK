@@ -71,13 +71,15 @@ class LaporanController extends Controller
                 ->where('tipe_surat', "=", $tipeSurat)
                 ->get();
 
-        return view('laporan/laporan', compact('dariTanggal', 'sampaiTanggal', 'tipeSurat', 'surat'));
+        switch ($request->input('excel')) {
+            case 'display':
+                return view('laporan/laporan', compact('dariTanggal', 'sampaiTanggal', 'tipeSurat', 'surat'));
+                break;
+            case 'export':
+                $filename = "Laporan Surat" . $tipeSurat . " Tanggal " . $dariTanggal . " Sampai " . $sampaiTanggal . " .xlsx";
+                $export = app()->makeWith(LaporanExport::class, compact('dariTanggal', 'sampaiTanggal', 'tipeSurat'));
+                return $export->download($filename);
+                break;
+        }
     }
-
-    public function ExportLaporan()
-    {
-        return Excel::download(new LaporanExport, 'Laporan.xlsx');
-    }
-
-
 }
