@@ -1,7 +1,7 @@
 @extends('layouts.template')
 
 @section('content')
-<header class="blue accent-3 relative nav-sticky">
+    <header class="blue accent-3 relative nav-sticky">
         <div class="container-fluid text-white">
             <div class="row p-t-b-10 ">
                 <div class="col">
@@ -20,54 +20,23 @@
                     <h6> CURRENT STATS </h6>
                 </div>
                 <div class="card-body p-0">
-                    <div class="lightSlider" data-item="6" data-item-xl="4" data-item-md="2" data-item-sm="1" data-pause="7000" data-pager="false" data-auto="true"
+                    <div class="lightSlider" data-item="6" data-item-xl="4" data-item-md="2" data-item-sm="1"
+                         data-pause="7000" data-pager="false" data-auto="true"
                          data-loop="true">
-                        <div class="p-5 bg-primary text-white">
-                            <h5 class="font-weight-normal s-14">Sodium</h5>
-                            <span class="s-48 font-weight-lighter text-primary">675</span>
-                            <div> Oxygen
-                                <span class="text-primary">
-                        <i class="icon icon-arrow_downward"></i> 67%</span>
-                            </div>
-                        </div>
                         <div class="p-5">
-                            <h5 class="font-weight-normal s-14">Iron</h5>
-                            <span class="s-48 font-weight-lighter light-green-text">675</span>
-                            <div> Carbon
+                            <h5 class="font-weight-normal s-14">Surat</h5>
+                            <span class="s-48 font-weight-lighter light-green-text">{{count($surat)}}</span>
+                            <div> Disposisi
                                 <span class="text-light-green">
-                        <i class="icon icon-arrow_downward"></i> 67%</span>
+                        <i class="icon icon-arrow-circle-right"></i> {{count($disposisi_surats)}}</span>
                             </div>
                         </div>
                         <div class="p-5 light">
-                            <h5 class="font-weight-normal s-14">Helium</h5>
-                            <span class="s-48 font-weight-lighter text-primary">300</span>
-                            <div> Hydrogen
+                            <h5 class="font-weight-normal s-14">User</h5>
+                            <span class="s-48 font-weight-lighter text-primary">{{count($user)}}</span>
+                            <div> Admin
                                 <span class="text-primary">
-                        <i class="icon icon-arrow_downward"></i> 67%</span>
-                            </div>
-                        </div>
-                        <div class="p-5">
-                            <h5 class="font-weight-normal s-14">Carbon</h5>
-                            <span class="s-48 font-weight-lighter amber-text">700</span>
-                            <div> Helium
-                                <span class="amber-text">
-                        <i class="icon icon-arrow_downward"></i> 67%</span>
-                            </div>
-                        </div>
-                        <div class="p-5 light">
-                            <h5 class="font-weight-normal s-14">Oxygen</h5>
-                            <span class="s-48 font-weight-lighter text-indigo">411</span>
-                            <div> Iron
-                                <span class="text-indigo">
-                        <i class="icon icon-arrow_downward"></i> 89%</span>
-                            </div>
-                        </div>
-                        <div class="p-5">
-                            <h5 class="font-weight-normal s-14">Helium</h5>
-                            <span class="s-48 font-weight-lighter pink-text">224</span>
-                            <div> Sodium
-                                <span class="pink-text">
-                        <i class="icon icon-arrow_downward"></i> 47%</span>
+                        <i class="icon icon-arrow-right"></i> {{\App\User::where('authority','=','admin')->count()}}</span>
                             </div>
                         </div>
                     </div>
@@ -75,5 +44,5 @@
             </div>
         </div>
     </div>
-</div>
+    </div>
 @endsection

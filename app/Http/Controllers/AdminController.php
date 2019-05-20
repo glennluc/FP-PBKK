@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
+use App\Disposisi;
 use App\Surat;
 use Illuminate\Support\Facades\DB;
 use App\User;
@@ -22,8 +23,11 @@ class AdminController extends Controller
     {
         $surat = Surat::all();
         $user = User::all();
+        $disposisi_surats = DB::table('disposisi_surats')
+            ->where('status_surat_disposisi','!=','sudah')
+            ->get();
 
-        return view('admin/dashboard', compact('surat','user'));
+        return view('admin/dashboard', compact('surat','user','disposisi_surats'));
     }
     
 }
