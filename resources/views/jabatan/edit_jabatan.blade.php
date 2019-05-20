@@ -39,24 +39,24 @@
                                 <div class="form-row">
                                     @foreach ($jabatan as $value)
                                      @endforeach  
-                                     <input name="id_rootJabs" value="{{$value->id_rootJabs}}"
+                                     <input name="id_rootJabs" value="{{$jabatan->id_rootJabs}}"
                                                         
                                                            class="form-control r-0 light s-12 " type="hidden">
 
-                                    <input name="id_jabatan" value="{{$value->id_jabatan}}"
+                                    <input name="id_jabatan" value="{{$jabatan->id_jabatan}}"
                                                         
                                                            class="form-control r-0 light s-12 " type="hidden">
                                     <div class="col-md-8">
                                         <div class="form-group m-0">
                                             <label for="nama_jabatan" class="col-form-label s-12">Nama Jabatan</label>
-                                            <input name="nama_jabatan" placeholder="Masukan Nama Jabatan" value="{{$value->nama_jabatan}}" class="form-control r-0 light s-12 " type="text">
+                                            <input name="nama_jabatan" placeholder="Masukan Nama Jabatan" value="{{$jabatan->nama_jabatan}}" class="form-control r-0 light s-12 " type="text">
                                         </div>
                                         <div class="form-group m-0">
                                             <label for="id_bagian" class="col-form-label s-12">Bagian</label>
                                             <select name="id_bagian" class="form-control r-0 light s-12" required="">
-                                                <option value="{{$value->id_bagians}}">{{$value->id_bagians}}</option>
-                                                <?php  foreach ($bagian as $value) : ?>
-                                                <option value="{{$value->id_bagian}}">{{$value->nama_bagian}}</option>
+                                                <option value="{{$jabatan->id_bagians}}">{{$jabatan->nama_bagian}}</option>
+                                                <?php  foreach ($bagian as $jabatans) : ?>
+                                                <option value="{{$jabatan->id_bagians}}">{{$jabatans->nama_bagian}}</option>
                                                 <?php endforeach; ?>
                                         </select>
                                         </div>
@@ -64,7 +64,7 @@
                                             <label for="level" class="col-form-label s-12">Level</label>
                                             <select name="level" class="form-control r-0 light s-12"
                                                         required="">
-                                                    <option value="{{$value->level}}">{{$value->level}}</option>
+                                                    <option value="{{$jabatan->level}}">{{$jabatan->level}}</option>
                                                     <option value="admin">admin</option>
                                                     <option value="user">user</option>
                                                     <option value="sekretaris">sekretaris</option>
@@ -74,15 +74,15 @@
                                         <div class="form-group m-0">
                                             <label for="parent_jabatan" class="col-form-label s-12">Parent Jabatan</label>
                                             <select name="id_rootJabs" class="form-control r-0 light s-12" required="">
-                                            <option value="{{$value->parent_jabatan}}">{{$value->parent_jabatan}}</option>
-                                            <?php  foreach ($rootjabatan as $value) : ?>
-                                            <option value="<?php echo $value->id_rootJab ?><?php echo $value->root_Jab ?>">{{$value->root_jab}}</option>
+                                            <option value="{{$jabatan->id_rootJabs}}">{{$jabatan->parent_jabatan}}</option>
+                                            <?php  foreach ($rootjabatan as $roots) : ?>
+                                            <option value="<?php echo $roots->id_rootJab ?><?php echo $roots->root_Jab ?>">{{$roots->root_jab}}</option>
                                             <?php endforeach; ?>
                                         </select>
                                         </div>
                                         <div class="form-group m-0">
                                             <label for="keterangan" class="col-form-label s-12">Keterangan</label>
-                                            <input name="keterangan" value="{{$value->keterangan}}" placeholder="Isi Keterangan" class="form-control r-0 light s-12 " type="text">
+                                            <input name="keterangan" value="{{$jabatan->keterangan}}" placeholder="Isi Keterangan" class="form-control r-0 light s-12 " type="text">
                                         </div>
                                     </div> 
 

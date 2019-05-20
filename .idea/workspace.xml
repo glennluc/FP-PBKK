@@ -2,15 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c3ab73f2-1510-40fa-83a7-07fd9b686ba3" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/DisposisiController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/DisposisiController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/LoginController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/LoginController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/SuratController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/SuratController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/disposisi/create_disposisi.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/disposisi/create_disposisi.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/disposisi/disposisi.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/disposisi/disposisi.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/disposisi/edit_disposisi.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/disposisi/edit_disposisi.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/surat/create_surat.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/surat/create_surat.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/surat/surat.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/surat/surat.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/JabatanController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/JabatanController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/jabatan/edit_jabatan.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/jabatan/edit_jabatan.blade.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -24,20 +18,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="create_surat.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/surat/create_surat.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="109">
-              <caret line="70" column="48" selection-start-line="70" selection-start-column="48" selection-end-line="75" selection-end-column="57" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SuratController.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="SuratController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/SuratController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="528">
-              <caret line="139" column="9" selection-start-line="139" selection-start-column="9" selection-end-line="139" selection-end-column="9" />
+            <state relative-caret-position="392">
+              <caret line="131" column="16" selection-start-line="131" selection-start-column="16" selection-end-line="131" selection-end-column="16" />
               <folding>
                 <element signature="e#40#53#0#PHP" expanded="true" />
               </folding>
@@ -49,7 +34,34 @@
         <entry file="file://$PROJECT_DIR$/resources/views/surat/surat.blade.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="272">
-              <caret line="79" column="92" lean-forward="true" selection-start-line="79" selection-start-column="92" selection-end-line="79" selection-end-column="92" />
+              <caret line="79" column="92" selection-start-line="79" selection-start-column="92" selection-end-line="79" selection-end-column="92" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="edit_user.blade.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/admin/edit_user.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="340">
+              <caret line="151" column="69" selection-start-line="151" selection-start-column="69" selection-end-line="151" selection-end-column="69" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="edit_jabatan.blade.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/jabatan/edit_jabatan.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="235">
+              <caret line="78" column="110" selection-start-line="78" selection-start-column="110" selection-end-line="78" selection-end-column="110" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="JabatanController.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/JabatanController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="358">
+              <caret line="76" column="36" selection-start-line="76" selection-start-column="36" selection-end-line="76" selection-end-column="36" />
             </state>
           </provider>
         </entry>
@@ -81,15 +93,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UserController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/UserController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="70" column="8" selection-start-line="70" selection-start-column="8" selection-end-line="87" selection-end-column="28" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="DisposisiController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/DisposisiController.php">
           <provider selected="true" editor-type-id="text-editor">
@@ -108,15 +111,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="edit_disposisi.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/disposisi/edit_disposisi.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="82" column="84" selection-start-line="82" selection-start-column="84" selection-end-line="82" selection-end-column="84" />
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
   </component>
   <component name="FindInProjectRecents">
@@ -129,10 +123,13 @@
       <find>disposisi_status</find>
       <find>id_surats</find>
       <find>$disposisi</find>
+      <find>id_bagian</find>
+      <find>id_rootjabs</find>
     </findStrings>
     <replaceStrings>
       <replace>keterangan_disposisi</replace>
       <replace>$surat</replace>
+      <replace>$jabatan</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -164,7 +161,6 @@
         <option value="$PROJECT_DIR$/app/Exports/LaporanExport.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/LaporanController.php" />
         <option value="$PROJECT_DIR$/resources/views/jabatan/create_jabatan.blade.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/JabatanController.php" />
         <option value="$PROJECT_DIR$/resources/views/surat/create_surat.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/disposisi/create_disposisi.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/disposisi/edit_disposisi.blade.php" />
@@ -174,6 +170,8 @@
         <option value="$PROJECT_DIR$/app/Http/Controllers/LoginController.php" />
         <option value="$PROJECT_DIR$/resources/views/surat/surat.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/SuratController.php" />
+        <option value="$PROJECT_DIR$/resources/views/jabatan/edit_jabatan.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/JabatanController.php" />
       </list>
     </option>
   </component>
@@ -454,12 +452,12 @@
       <workItem from="1557651140241" duration="4487000" />
       <workItem from="1558100852988" duration="14188000" />
       <workItem from="1558185932335" duration="17868000" />
-      <workItem from="1558354680985" duration="18062000" />
+      <workItem from="1558354680985" duration="20034000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="57819000" />
+    <option name="totallyTimeSpent" value="59791000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-3288" y="-165" width="1936" height="1096" extended-state="6" />
@@ -494,13 +492,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/create_user.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2261">
-          <caret line="133" column="34" selection-start-line="133" selection-start-column="34" selection-end-line="133" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/admin/user.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1309">
@@ -589,6 +580,16 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="175">
           <caret line="5" column="228544" selection-start-line="5" selection-start-column="228537" selection-end-line="5" selection-end-column="228544" />
+          <folding>
+            <element signature="e#54545#54745#2" expanded="true" />
+            <element signature="e#54953#55102#2" expanded="true" />
+            <element signature="e#55604#55750#2" expanded="true" />
+            <element signature="e#56051#56217#1" expanded="true" />
+            <element signature="e#65623#65866#2" expanded="true" />
+            <element signature="e#66733#66982#2" expanded="true" />
+            <element signature="e#91833#92023#2" expanded="true" />
+            <element signature="e#92069#92259#2" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -657,13 +658,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/edit_user.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-391">
-          <caret line="9" column="28" selection-start-line="9" selection-start-column="28" selection-end-line="9" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/BagianController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="222">
@@ -715,13 +709,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="568">
           <caret line="156" column="21" selection-start-line="156" selection-start-column="21" selection-end-line="156" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/JabatanController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="562">
-          <caret line="46" selection-start-line="46" selection-end-line="46" />
         </state>
       </provider>
     </entry>
@@ -808,17 +795,38 @@
     <entry file="file://$PROJECT_DIR$/resources/views/surat/surat.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
-          <caret line="79" column="92" lean-forward="true" selection-start-line="79" selection-start-column="92" selection-end-line="79" selection-end-column="92" />
+          <caret line="79" column="92" selection-start-line="79" selection-start-column="92" selection-end-line="79" selection-end-column="92" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/edit_user.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="151" column="69" selection-start-line="151" selection-start-column="69" selection-end-line="151" selection-end-column="69" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/SuratController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="528">
-          <caret line="139" column="9" selection-start-line="139" selection-start-column="9" selection-end-line="139" selection-end-column="9" />
+        <state relative-caret-position="392">
+          <caret line="131" column="16" selection-start-line="131" selection-start-column="16" selection-end-line="131" selection-end-column="16" />
           <folding>
             <element signature="e#40#53#0#PHP" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/jabatan/edit_jabatan.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="235">
+          <caret line="78" column="110" selection-start-line="78" selection-start-column="110" selection-end-line="78" selection-end-column="110" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/JabatanController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="358">
+          <caret line="76" column="36" selection-start-line="76" selection-start-column="36" selection-end-line="76" selection-end-column="36" />
         </state>
       </provider>
     </entry>

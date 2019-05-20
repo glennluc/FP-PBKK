@@ -55,23 +55,26 @@ class JabatanController extends Controller
 
     Public function showEditJabatan($id)
     {
-    	$jabatan = DB::table('jabatans')
-		           ->where('id_jabatan', $id)
-		           ->get();
+        $jabatan = DB::table('jabatans')
+            ->where('id_jabatan', $id)
+            ->join('bagians', 'jabatans.id_bagians', '=', 'bagians.id_bagian')
+            ->select('jabatans.*', 'bagians.nama_bagian')
+            ->first();
         $bagian = Bagian::all();
         $rootjabatan = RootJabatan::all();
-        
+
         return view('jabatan/edit_jabatan', compact('jabatan', 'bagian', 'rootjabatan'));
     }
 
     Public function UpdateJabatan(Request $request)
     {
-    	$jabatans = Jabatan::all();
-    	$jabatans->id_rootJabs = $request->id_rootJabs;
-    	$list_jabatan = DB::table('rootjabatans')
+        $jabatans = Jabatan::all();
+        $jabatans->id_rootJabs = $request->id_rootJabs;
+        $list_jabatan = DB::table('rootjabatans')
             ->where('id_rootJab', '=', $jabatans->id_rootJabs)
             ->first();
         $list_jabatan->root_jab;
+
 
         $jabatan = array(
             'nama_jabatan' => $request->nama_jabatan,
@@ -82,7 +85,7 @@ class JabatanController extends Controller
             'id_jabatan' => $request->id_jabatan,
             'parent_jabatan' => $list_jabatan->root_jab
         );
-        
+
         DB::table('jabatans')
             ->where('id_jabatan', $request->id_jabatan)
             ->update($jabatan);
