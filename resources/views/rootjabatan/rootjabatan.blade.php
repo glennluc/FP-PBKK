@@ -67,9 +67,9 @@
                                             <td>{{$row->id_rootJab}}</td>
                                             <td><span class="r-3 badge badge-success ">{{$row->root_jab}}</span></td>
                                             <td>
-                                                <a href="panel-page-profile.html"><i class="icon-eye mr-3"></i></a>
-                                                <a href="panel-page-profile.html"><i class="icon-pencil mr-3"></i></a>
-                                                <a href="panel-page-profile.html"><i class="icon-trash"></i></a>
+                                                <!-- <a href="panel-page-profile.html"><i class="icon-eye mr-3"></i></a> -->
+                                                <a href="{{URL('admin/edit-rootjab/'.$row->id_rootJab)}}"><i class="icon-pencil mr-3"></i></a>
+                                                <a href="{{URL('admin/delete-rootjab/'.$row->id_rootJab)}}"><i class="icon-trash"></i></a>
                                             </td>
                                         </tr>
                                         <?php  }  ?>

@@ -19,7 +19,7 @@
                            role="tab" aria-controls="v-pills-all"><i class="icon icon-home2"></i>Manage Jabatan</a>
                     </li>
                     <li class="float-right">
-                        <a class="nav-link"  href="{{ URL('admin/create-jabatan')}}" ><i class="icon icon-plus-circle"></i> Tambah Bagian</a>
+                        <a class="nav-link"  href="{{ URL('admin/create-jabatan')}}" ><i class="icon icon-plus-circle"></i>Tambah Jabatan</a>
                     </li>
                 </ul>
             </div>
@@ -71,9 +71,9 @@
                                             <td>{{$row->parent_jabatan}}</td>
                                             <td>{{$row->keterangan}}</td>
                                             <td>
-                                                <a href="panel-page-profile.html"><i class="icon-eye mr-3"></i></a>
-                                                <a href="panel-page-profile.html"><i class="icon-pencil mr-3"></i></a>
-                                                <a href="panel-page-profile.html"><i class="icon-trash"></i></a>
+                                                <!-- <a href="panel-page-profile.html"><i class="icon-eye mr-3"></i></a> -->
+                                                <a href="{{URL('admin/edit-jabatan/'.$row->id_jabatan)}}"><i class="icon-pencil mr-3"></i></a>
+                                                <a href="{{URL('admin/delete-jabatan/'.$row->id_jabatan)}}"><i class="icon-trash"></i></a>
                                             </td>
                                         </tr>
                                         <?php  }  ?>

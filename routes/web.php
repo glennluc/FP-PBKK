@@ -38,10 +38,16 @@ Route::post('/admin/edit-bagian/', 'BagianController@UpdateBagian');
 Route::get('/admin/get-jabatan', 'JabatanController@GetJabatan');
 Route::get('/admin/create-jabatan', 'JabatanController@showCreateJabatan');
 Route::post('/admin/create-jabatan', 'JabatanController@CreateJabatan');
+Route::get('/admin/delete-jabatan/{id}', 'JabatanController@DeleteJabatan');
+Route::get('/admin/edit-jabatan/{id}', 'JabatanController@showEditRJabatan');
+Route::post('/admin/edit-jabatan/', 'JabatanController@UpdateJabatan');
 
 Route::get('/admin/get-rootjab', 'RootJabatanController@GetRootJabatan');
 Route::get('/admin/create-rootjab', 'RootJabatanController@showCreateRootJabatan');
 Route::post('/admin/create-rootjab', 'RootJabatanController@CreateRootJabatan');
+Route::get('/admin/delete-rootjab/{id}', 'RootJabatanController@DeleteRootJabatan');
+Route::get('/admin/edit-rootjab/{id}', 'RootJabatanController@showEditRootJabatan');
+Route::post('/admin/edit-rootjab/', 'RootJabatanController@UpdateRootJabatan');
 
 Route::get('/admin/get-surat', 'SuratController@GetSurat');
 Route::get('/admin/create-surat', 'SuratController@showCreateSurat');
