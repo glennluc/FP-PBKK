@@ -42,7 +42,8 @@
                                     <h5 class="card-title">Edit Disposisi</h5>
                                     <div class="form-row">
                                         <div class="col-md-8">
-                                            <input name="id_disposisi" class="form-control r-0 light s-12 " type="hidden"
+                                            <input name="id_disposisi" class="form-control r-0 light s-12 "
+                                                   type="hidden"
                                                    value="{{$disposisi->id_disposisi}}">
                                             <input name="id_surats" class="form-control r-0 light s-12 " type="hidden"
                                                    value="{{$disposisi->id_surats}}">
@@ -71,17 +72,24 @@
                                                        value="{{$disposisi->dari}}">
                                             </div>
                                             <div class="form-group m-0">
-                                                <label for="disposisi_status" class="col-form-label s-12">Disposisi
-                                                    Status</label>
-                                                <input name="disposisi_status" class="form-control r-0 light s-12 "
-                                                       type="text" value="{{$disposisi->disposisi_status}}">
+                                                <label for="keterangan_disposisi" class="col-form-label s-12">Keterangan
+                                                    Disposisi</label>
+                                                <input name="keterangan_disposisi" class="form-control r-0 light s-12 " type="text"
+                                                       value="{{$disposisi->keterangan_disposisi}}">
                                             </div>
                                             <div class="form-group m-0">
                                                 <label for="status_surat_disposisi" class="col-form-label s-12">Status
                                                     Surat Disposisi</label>
-                                                <input name="status_surat_disposisi"
-                                                       class="form-control r-0 light s-12 " type="text"
-                                                       value="{{$disposisi->status_surat_disposisi}}">
+                                                <select name="status_surat_disposisi" class="form-control r-0 light s-12"
+                                                        required="">
+                                                    @if($disposisi->status_surat_disposisi == 'Sudah')
+                                                        <option value="Sudah" selected>Sudah</option>
+                                                        <option value="Belum">Belum</option>
+                                                    @elseif($disposisi->status_surat_disposisi == 'Belum')
+                                                        <option value="Sudah">Sudah</option>
+                                                        <option value="Belum" selected>Belum</option>
+                                                    @endif
+                                                </select>
                                             </div>
                                             <div class="form-group m-0">
                                                 <label for="tipe_surat_disposisi" class="col-form-label s-12">Tipe Surat

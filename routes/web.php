@@ -57,6 +57,7 @@ Route::get('/admin/delete-surat/{id}', 'SuratController@DeleteSurat');
 Route::get('admin/arsip-surat/{id}', 'SuratController@ArsipSurat');
 Route::get('admin/pulih-surat/{id}', 'SuratController@PulihSurat');
 Route::get('admin/get-arsipsurat', 'SuratController@GetArsipSurat');
+Route::get('admin/revisi-surat/{id}', 'SuratController@RevisiSurat');
 
 
 Route::get('/admin/get-disposisi', 'DisposisiController@GetDisposisi');
