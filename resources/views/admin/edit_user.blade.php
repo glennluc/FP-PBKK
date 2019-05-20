@@ -140,7 +140,7 @@
                                             <select name="bagian" class="form-control r-0 light s-12" required="">
                                                 <option value="{{$value->id_bagians}}"}}>{{$value->nama_bagian}}</option>
                                                 <?php  foreach ($bagian as $val) : ?>
-                                                <option value="{{$val->id_bagians}}">{{$val->nama_bagian}}</option>
+                                                <option value="{{$val->id_bagian}}">{{$val->nama_bagian}}</option>
                                                 <?php endforeach; ?>
                                             </select>
                                         </div>
@@ -149,7 +149,7 @@
                                             <select name="jabatan" class="form-control r-0 light s-12" required="">
                                                 <option value="{{$value->id_jabatans}}">{{$value->nama_jabatan}}</option>
                                                 <?php  foreach ($jabatan as $val) : ?>
-                                                <option value="{{$val->id_jabatans}}">{{$val->nama_jabatan}}</option>
+                                                <option value="{{$val->id_jabatan}}">{{$val->nama_jabatan}}</option>
                                                 <?php endforeach; ?>
                                             </select>
                                         </div>
@@ -160,7 +160,7 @@
                                             <select name="rootjabatan" class="form-control r-0 light s-12" required="">
                                                 <option value="{{$value->id_rootJabs}}">{{$value->root_jab}}</option>
                                                 <?php  foreach ($rootjabatan as $val) : ?>
-                                                <option value="{{$val->id_rootJabs}}">{{$val->root_jab}}</option>
+                                                <option value="{{$val->id_rootJab}}">{{$val->root_jab}}</option>
                                                 <?php endforeach; ?>
                                             </select>
                                         </div>

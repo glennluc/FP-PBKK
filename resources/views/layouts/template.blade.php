@@ -156,7 +156,6 @@
 
                 </li>
                 @if(\Illuminate\Support\Facades\Session::get('auth') == 'admin')
-                    {
                     <li class="treeview"><a href="#"><i class="icon icon-account_box light-green-text s-18"></i>Management<i
                                     class="icon icon-angle-left s-18 pull-right"></i></a>
                         <ul class="treeview-menu">
@@ -169,7 +168,6 @@
                             </li>
                         </ul>
                     </li>
-                    }
                 @endif
                 <li class="treeview no-b"><a href="#">
                         <i class="icon icon-package light-green-text s-18"></i>

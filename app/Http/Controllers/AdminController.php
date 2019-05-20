@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
+use App\Surat;
 use Illuminate\Support\Facades\DB;
 use App\User;
 use App\Jabatan;
@@ -19,7 +20,10 @@ class AdminController extends Controller
      */
     public function index()
     {
-        return view('admin/dashboard');
+        $surat = Surat::all();
+        $user = User::all();
+
+        return view('admin/dashboard', compact('surat','user'));
     }
     
 }
