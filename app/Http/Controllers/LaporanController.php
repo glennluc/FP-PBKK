@@ -49,6 +49,18 @@ class LaporanController extends Controller
         elseif ($dariTanggal = null && $sampaiTanggal = null && $tipeSurat = null)
             $surat = DB::table('surats')
                 ->get();
+        elseif ($dariTanggal = null && $sampaiTanggal = null && $tipeSurat != null)
+            $surat = DB::table('surats')
+                ->where('tipe_surat', "=", $tipeSurat)
+                ->get();
+        elseif ($dariTanggal = null && $sampaiTanggal != null && $tipeSurat = null)
+            $surat = DB::table('surats')
+                ->whereDate('tanggal_surat', '<=', $sampaiTanggal)
+                ->get();
+        elseif ($dariTanggal != null && $sampaiTanggal = null && $tipeSurat = null)
+            $surat = DB::table('surats')
+                ->whereDate('tanggal_surat', '>=', $dariTanggal)
+                ->get();
         else
             $surat = DB::table('surats')
                 ->whereDate('tanggal_surat', '>=', $dariTanggal)
