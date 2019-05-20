@@ -43,7 +43,7 @@
                                             <th>No Surat</th>
                                             <th>Oleh</th>
                                             <th>Kepada</th>
-                                            <th>Disposisi Status</th>
+                                            <th>Keterangan Disposisi</th>
                                             <th>Status Surat Disposisi</th>
                                             <th>Tipe Surat Disposisi</th>
                                             <th>Tanggal</th>

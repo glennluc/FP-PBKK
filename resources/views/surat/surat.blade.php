@@ -77,7 +77,9 @@
                                                 <a href="{{URL('admin/download-surat/'.$row->id_surat)}}"><i
                                                             class="icon-eye mr-3"></i></a>
                                                 <a href="{{URL('admin/delete-surat/'.$row->id_surat)}}"><i
-                                                            class="icon-trash"></i></a>
+                                                            class="icon-trash mr-3"></i></a>
+                                                <a href="{{URL('admin/revisi-surat/'.$row->id_surat)}}"><i
+                                                            class="icon-check-circle"></i></a>
                                             </td>
                                         </tr>
                                         <?php  }  ?>

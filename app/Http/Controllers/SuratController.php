@@ -7,19 +7,29 @@ use App\Jabatan;
 use App\Bagian;
 use App\RootJabatan;
 use App\Surat;
+use function Couchbase\defaultDecoder;
 use Faker\Provider\File;
 use http\Env\Response;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Http\RedirectResponse;
+use Illuminate\Support\Facades\Session;
 
 class SuratController extends Controller
 {
     Public function GetSurat()
     {
-        $surat = DB::table('surats')
-            ->where('arsip_status', '0')
-            ->get();
+        if (Session::get('auth') == "admin") {
+            $surat = DB::table('surats')
+                ->where('arsip_status', '0')
+                ->get();
+        } else {
+            $surat = DB::table('surats')
+                ->where('arsip_status', '0')
+                ->where('id_users', Session::get('clogid'))
+                ->get();
+        }
+
         return view('surat/surat', ['surat' => $surat]);
     }
 
@@ -58,8 +68,8 @@ class SuratController extends Controller
         $surat->perihal = $request->perihal;
         $surat->tembusan = $request->tembusan;
         $surat->no_berkas = $request->no_berkas;
-        $surat->status_surat = $request->status_surat;
-        $surat->status_disposisi = $request->status_disposisi;
+        $surat->status_surat = "Menunggu Revisi";
+        $surat->status_disposisi = "Tidak ada";
 
         $file_surat = $request->file('file_surat');
         $surat->file_surat = $file_surat->getClientOriginalName();
@@ -73,7 +83,7 @@ class SuratController extends Controller
         $surat->save();
 
         return redirect('admin/get-surat')
-            ->with('popup','Berhasil Memasukkan Surat');
+            ->with('popup', 'Berhasil Memasukkan Surat');
     }
 
     public function DownloadSurat($id)
@@ -92,7 +102,7 @@ class SuratController extends Controller
     public function DeleteSurat($id)
     {
         $user = DB::table('surats')->where('id_surat', $id)->delete();
-        return redirect('admin/get-surat')->with('popup','Berhasil Menghapus Surat');
+        return redirect('admin/get-surat')->with('popup', 'Berhasil Menghapus Surat');
     }
 
     public function ArsipSurat($id)
@@ -100,7 +110,7 @@ class SuratController extends Controller
         DB::table('surats')
             ->where('id_surat', $id)
             ->update(['arsip_status' => 1]);
-        return redirect('admin/get-surat')->with('popup','Berhasil Mengarsipkan Surat');
+        return redirect('admin/get-surat')->with('popup', 'Berhasil Mengarsipkan Surat');
     }
 
     public function PulihSurat($id)
@@ -110,6 +120,24 @@ class SuratController extends Controller
             ->update(['arsip_status' => 0]);
 
         return redirect('admin/get-arsipsurat')->with('popup', 'Berhasil Memulihkan surat');
+    }
+
+    public function RevisiSurat($id)
+    {
+        if (Session::get('auth') == 'admin' || Session::get('auth') == 'sekretaris') {
+            DB::table('surats')
+                ->where('id_surat', $id)
+                ->update(['status_surat' => 'Accepted']);
+            return redirect('admin/get-surat')->with('popup', 'Surat Diterima');
+        } else {
+            DB::table('surats')
+                ->where('id_surat', $id)
+                ->update(['status_disposisi' => "Sudah"]);
+            DB::table('disposisi_surats')
+                ->where('id_surats', $id)
+                ->update(['status_surat_disposisi' => "Sudah"]);
+            return redirect('admin/get-surat')->with('popup', 'Revisi Selesai');
+        }
     }
 
 }

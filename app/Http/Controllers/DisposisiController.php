@@ -28,13 +28,19 @@ class DisposisiController extends Controller
 
     Public function showCreateDisposisi($id)
     {
-        $disposisi = DB::table('disposisi_surats')
-            ->join('surats', 'disposisi_surats.id_surats', '=', 'surats.id_surat')
+//        $disposisi = DB::table('disposisi_surats')
+//            ->join('surats', 'disposisi_surats.id_surats', '=', 'surats.id_surat')
+//            ->join('users','surats.id_users','=','users.id_user')
+//            ->select('disposisi_surats.*', 'surats.no_surat','users.name','users.id_user')
+//            ->where('disposisi_surats.id_surats',$id)
+//            ->first();
+        $surat = DB::table('surats')
+            ->where('id_surat','=',$id)
             ->join('users','surats.id_users','=','users.id_user')
-            ->select('disposisi_surats.*', 'surats.no_surat','users.name','users.id_user')
-            ->where('disposisi_surats.id_surats',$id)
+            ->select('surats.*','users.name')
             ->first();
-        return view('disposisi/create_disposisi', compact('disposisi'));
+//        dd($disposisi,$id);
+        return view('disposisi/create_disposisi', compact('surat'));
     }
 
     Public function CreateDisposisi(Request $request)
@@ -55,6 +61,15 @@ class DisposisiController extends Controller
         $disposisi->waktu_disposisi = $ltime;
 
         $disposisi->save();
+
+        $surat = array(
+            'status_surat' => "Revisi",
+            'status_disposisi' => "Belum"
+        );
+
+        DB::table('surats')
+            ->where('id_surat', $request->id_surats)
+            ->update($surat);
 
         return redirect('admin/get-disposisi')->with('popup', 'Berhasil Menambahkan Disposisi');
     }

@@ -41,10 +41,11 @@ class LoginController extends Controller
                 ->where('id_user', $user->id_user)
                 ->update(['last_login' => $mytime]);
             
-            if ($user->authority == "admin")
+            if ($user->authority == "admin" || $user->authority == "user")
             {
                 $current_login = $user->name;
                 $cur_id = $user->id_user;
+                \Illuminate\Support\Facades\Session::put('auth',$user->authority);
                 Session::put('clog',$current_login);
                 Session::put('clogid',$cur_id);
                 return redirect('admin/dashboard');

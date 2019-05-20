@@ -76,12 +76,12 @@
                                                 </select>
                                             </div>
                                             <div class="form-group m-0">
-                                                <label for="asal_surat" class="col-form-label s-12">Asal Surat</label>
+                                                <label for="asal_surat" class="col-form-label s-12">Asal Surat (Instansi)</label>
                                                 <input name="asal_surat" class="form-control r-0 light s-12 "
                                                        type="text">
                                             </div>
                                             <div class="form-group m-0">
-                                                <label for="dari" class="col-form-label s-12">Dari</label>
+                                                <label for="dari" class="col-form-label s-12">Nama Pengirim</label>
                                                 <input name="dari" class="form-control r-0 light s-12 " type="text">
                                             </div>
                                             <input name="id_users" class="form-control r-0 light s-12 "
@@ -102,20 +102,8 @@
                                                 <input name="tembusan" class="form-control r-0 light s-12 " type="text">
                                             </div>
                                             <div class="form-group m-0">
-                                                <label for="no_berkas" class="col-form-label s-12">Nomor Berkas</label>
+                                                <label for="no_berkas" class="col-form-label s-12">Nomor Berkas Arsip</label>
                                                 <input name="no_berkas" class="form-control r-0 light s-12 "
-                                                       type="text">
-                                            </div>
-                                            <div class="form-group m-0">
-                                                <label for="status_surat" class="col-form-label s-12">Status
-                                                    Surat</label>
-                                                <input name="status_surat" class="form-control r-0 light s-12 "
-                                                       type="text">
-                                            </div>
-                                            <div class="form-group m-0">
-                                                <label for="status_disposisi" class="col-form-label s-12">Status
-                                                    Disposisi</label>
-                                                <input name="status_disposisi" class="form-control r-0 light s-12 "
                                                        type="text">
                                             </div>
                                             <div class="form-group m-0">

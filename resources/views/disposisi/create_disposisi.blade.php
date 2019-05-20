@@ -42,25 +42,26 @@
                                     <h5 class="card-title">Add Disposisi</h5>
                                     <div class="form-row">
                                         <div class="col-md-8">
+{{--                                            {{dd($disposisi)}}--}}
                                             <input type="hidden" class="form-control disabled" id="id_surats"
                                                    name="id_surats"
-                                                   value="{{$disposisi->id_surats}}" required>
+                                                   value="{{$surat->id_surat}}" required>
                                             <div class="form-group m-0">
                                                 <label for="no_surats" class="col-form-label s-12">No Surat</label>
                                                 <input name="no_surats" class="form-control r-0 light s-12 "
-                                                       value="{{$disposisi->no_surat}}" readonly>
+                                                       value="{{$surat->no_surat}}" readonly>
                                             </div>
                                             <div class="form-group m-0">
                                                 <label for="untuk" class="col-form-label s-12">Kepada</label>
                                                 <input class="form-control r-0 light s-12 "
-                                                       value="{{$disposisi->name}}">
+                                                       value="{{$surat->name}}" readonly>
                                                 <input name="untuk" class="form-control r-0 light s-12 "
-                                                       value="{{$disposisi->id_user}}" type="hidden">
+                                                       value="{{$surat->id_users}}" type="hidden">
                                             </div>
                                             <div class="form-group m-0">
                                                 <label for="dari" class="col-form-label s-12">Oleh</label>
                                                 <input id="test" name="dari" value="{{\Illuminate\Support\Facades\Session::get('clog')}}"
-                                                       class="form-control r-0 light s-12 " type="text">
+                                                       class="form-control r-0 light s-12 " type="text" readonly>
                                             </div>
                                             <div class="form-group m-0">
                                                 <label for="keterangan_disposisi" class="col-form-label s-12">Keterangan Disposisi</label>
@@ -70,10 +71,9 @@
                                             <div class="form-group m-0">
                                                 <label for="tipe_surat_disposisi" class="col-form-label s-12">Tipe Surat
                                                     Disposisi</label>
-                                                <select name="tipe_surat_disposisi" class="form-control r-0 light s-12"
-                                                        required="">
-                                                    <option value="internal">internal</option>
-                                                    <option value="eksternal">eksternal</option>
+                                                <input name="tipe_surat_disposisi" class="form-control r-0 light s-12 "
+                                                       type="text" value="{{$surat->tipe_surat}}" readonly>
+
                                                 </select>
                                             </div>
                                         </div>
