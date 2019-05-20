@@ -31,6 +31,8 @@
                         <fieldset>
                         @csrf
                         <div class="card no-b  no-r">
+{{--                            {{dd($rootjabatan)}}--}}
+                            <a></a>
                             <div class="card-body">
                                 <h5 class="card-title">Add Jabatan</h5>
                                 <div class="form-row">
@@ -62,7 +64,7 @@
                                             <select name="id_rootJabs" class="form-control r-0 light s-12" required="">
                                             <option>Root Jabatan</option>
                                             <?php  foreach ($rootjabatan as $value) : ?>
-                                            <option value="<?php echo $value->id_rootJab ?>|<?php echo $value->root_Jab ?>">{{$value->root_jab}}</option>
+                                            <option value="<?php echo $value->id_rootJab ?><?php echo $value->root_Jab ?>">{{$value->root_jab}}</option>
                                             <?php endforeach; ?>
                                         </select>
                                         </div>

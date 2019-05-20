@@ -48,8 +48,8 @@ class DisposisiController extends Controller
         $disposisi->dari = $request->dari;
         $disposisi->untuk = $request->untuk;
         $disposisi->id_surats = $request->id_surats;
-        $disposisi->disposisi_status = $request->disposisi_status;
-        $disposisi->status_surat_disposisi = $request->status_surat_disposisi;
+        $disposisi->keterangan_disposisi= $request->keterangan_disposisi;
+        $disposisi->status_surat_disposisi = "Belum";
         $disposisi->tipe_surat_disposisi = $request->tipe_surat_disposisi;
         $disposisi->tanggal_disposisi = $ldate;
         $disposisi->waktu_disposisi = $ltime;
@@ -94,7 +94,7 @@ class DisposisiController extends Controller
             'id_surats' => $request->id_surats,
             'dari' => $request->dari,
             'untuk' => $request->untuk,
-            'disposisi_status' => $request->disposisi_status,
+            'keterangan_disposisi' => $request->keterangan_disposisi,
             'status_surat_disposisi' => $request->status_surat_disposisi,
             'tipe_surat_disposisi' => $request->tipe_surat_disposisi,
             'tanggal_disposisi' => $ldate,

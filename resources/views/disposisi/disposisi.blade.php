@@ -62,7 +62,7 @@
                                             <td>{{$row->no_surat}}</td>
                                             <td>{{$row->dari}}</td>
                                             <td>{{$row->name}}</td>
-                                            <td>{{$row->disposisi_status}}</td>
+                                            <td>{{$row->keterangan_disposisi}}</td>
                                             <td>{{$row->status_surat_disposisi}}</td>
                                             <td>{{$row->tipe_surat_disposisi}}</td>
                                             <td>{{$row->tanggal_disposisi}}</td>

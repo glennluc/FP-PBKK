@@ -2,9 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c3ab73f2-1510-40fa-83a7-07fd9b686ba3" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/app/Exports/LaporanExport.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Exports/LaporanExport.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/LaporanController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/LaporanController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/laporan/laporan.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/laporan/laporan.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/DisposisiController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/DisposisiController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/JabatanController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/JabatanController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/disposisi/create_disposisi.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/disposisi/create_disposisi.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/jabatan/create_jabatan.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/jabatan/create_jabatan.blade.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -18,16 +20,16 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="laporan.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/laporan/laporan.blade.php">
+      <file leaf-file-name="create_jabatan.blade.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/jabatan/create_jabatan.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="239">
-              <caret line="71" column="89" selection-start-line="71" selection-start-column="89" selection-end-line="71" selection-end-column="89" />
+            <state relative-caret-position="408">
+              <caret line="63" column="119" lean-forward="true" selection-start-line="63" selection-start-column="44" selection-end-line="63" selection-end-column="119" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LaporanController.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="LaporanController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/LaporanController.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="460">
@@ -39,32 +41,41 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LaporanExport.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Exports/LaporanExport.php">
+      <file leaf-file-name="DisposisiController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/DisposisiController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="28" column="9" selection-start-line="28" selection-start-column="9" selection-end-line="28" selection-end-column="9" />
+            <state relative-caret-position="239">
+              <caret line="96" column="68" selection-start-line="96" selection-start-column="68" selection-end-line="96" selection-end-column="68" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="JabatanController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/JabatanController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="562">
+              <caret line="46" selection-start-line="46" selection-end-line="46" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="create_disposisi.blade.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/resources/views/disposisi/create_disposisi.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="201">
+              <caret line="66" column="81" selection-start-line="66" selection-start-column="81" selection-end-line="66" selection-end-column="81" />
               <folding>
-                <element signature="e#31#45#0#PHP" expanded="true" />
+                <element signature="e#2358#2705#0#HTML" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Surat.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Surat.php">
+      <file leaf-file-name="template.blade.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/layouts/template.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="39" selection-start-line="9" selection-start-column="39" selection-end-line="9" selection-end-column="39" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="web.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/routes/web.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-34">
-              <caret line="34" column="21" selection-start-line="34" selection-start-column="21" selection-end-line="34" selection-end-column="21" />
+            <state relative-caret-position="568">
+              <caret line="156" column="21" selection-start-line="156" selection-start-column="21" selection-end-line="156" selection-end-column="21" />
             </state>
           </provider>
         </entry>
@@ -108,16 +119,17 @@
         <option value="$PROJECT_DIR$/resources/views/admin/user.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/disposisi/pilih_disposisi.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/disposisi/disposisi.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/disposisi/create_disposisi.blade.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/DisposisiController.php" />
         <option value="$PROJECT_DIR$/resources/views/disposisi/edit_disposisi.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/layouts/template.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/BagianController.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/RootJabatanController.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/JabatanController.php" />
         <option value="$PROJECT_DIR$/resources/views/laporan/laporan.blade.php" />
         <option value="$PROJECT_DIR$/app/Exports/LaporanExport.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/LaporanController.php" />
+        <option value="$PROJECT_DIR$/resources/views/jabatan/create_jabatan.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/JabatanController.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/DisposisiController.php" />
+        <option value="$PROJECT_DIR$/resources/views/disposisi/create_disposisi.blade.php" />
       </list>
     </option>
   </component>
@@ -398,12 +410,12 @@
       <workItem from="1557651140241" duration="4487000" />
       <workItem from="1558100852988" duration="14188000" />
       <workItem from="1558185932335" duration="17868000" />
-      <workItem from="1558354680985" duration="10952000" />
+      <workItem from="1558354680985" duration="13467000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="50709000" />
+    <option name="totallyTimeSpent" value="53224000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-3288" y="-165" width="1936" height="1096" extended-state="6" />
@@ -415,8 +427,8 @@
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info id="npm" order="2" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.32941177" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19509594" />
+      <window_info anchor="bottom" id="Terminal" order="7" visible="true" weight="0.32941177" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19509594" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -438,13 +450,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/BagianController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="578">
-          <caret line="34" column="4" lean-forward="true" selection-start-line="34" selection-start-column="4" selection-end-line="38" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/admin/create_user.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2261">
@@ -536,13 +541,6 @@
         <state relative-caret-position="-762" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/LoginController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="731">
-          <caret line="48" column="47" selection-start-line="48" selection-start-column="47" selection-end-line="48" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/assets/css/app.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="175">
@@ -629,13 +627,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/disposisi/create_disposisi.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="51" column="117" selection-start-line="51" selection-start-column="117" selection-end-line="51" selection-end-column="117" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/admin/edit_user.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-391">
@@ -654,20 +645,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="530">
           <caret line="112" column="35" lean-forward="true" selection-start-line="112" selection-start-column="35" selection-end-line="112" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/DisposisiController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1360">
-          <caret line="89" column="17" selection-start-line="89" selection-start-column="17" selection-end-line="89" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/layouts/template.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="156" column="21" selection-start-line="156" selection-start-column="21" selection-end-line="156" selection-end-column="21" />
         </state>
       </provider>
     </entry>
@@ -696,13 +673,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="222">
           <caret line="95" column="5" selection-start-line="12" selection-start-column="4" selection-end-line="95" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/JabatanController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="15" selection-start-line="15" selection-end-line="15" />
         </state>
       </provider>
     </entry>
@@ -736,13 +706,6 @@
     <entry file="file://$PROJECT_DIR$/app/Jabatan.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/laporan/laporan.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="239">
-          <caret line="71" column="89" selection-start-line="71" selection-start-column="89" selection-end-line="71" selection-end-column="89" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Exports/LaporanExport.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
@@ -753,12 +716,64 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/laporan/laporan.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="239">
+          <caret line="71" column="89" selection-start-line="71" selection-start-column="89" selection-end-line="71" selection-end-column="89" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/LaporanController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="460">
           <caret line="103" column="81" selection-start-line="103" selection-start-column="81" selection-end-line="103" selection-end-column="81" />
           <folding>
             <element signature="e#40#53#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/JabatanController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="562">
+          <caret line="46" selection-start-line="46" selection-end-line="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/jabatan/create_jabatan.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="63" column="119" lean-forward="true" selection-start-line="63" selection-start-column="44" selection-end-line="63" selection-end-column="119" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/LoginController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="364">
+          <caret line="48" column="47" selection-start-line="48" selection-start-column="47" selection-end-line="48" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/layouts/template.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="568">
+          <caret line="156" column="21" selection-start-line="156" selection-start-column="21" selection-end-line="156" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/DisposisiController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="239">
+          <caret line="96" column="68" selection-start-line="96" selection-start-column="68" selection-end-line="96" selection-end-column="68" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/disposisi/create_disposisi.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="201">
+          <caret line="66" column="81" selection-start-line="66" selection-start-column="81" selection-end-line="66" selection-end-column="81" />
+          <folding>
+            <element signature="e#2358#2705#0#HTML" />
           </folding>
         </state>
       </provider>

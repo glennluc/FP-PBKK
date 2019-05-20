@@ -14,7 +14,8 @@
             <div class="row justify-content-between">
                 <ul class="nav nav-material nav-material-white responsive-tab" id="v-pills-tab" role="tablist">
                     <li>
-                        <a class="nav-link" href="{{ URL('admin/get-disposisi')}}"><i class="icon icon-home2"></i>Lihat Seluruh Disposisi</a>
+                        <a class="nav-link" href="{{ URL('admin/get-disposisi')}}"><i class="icon icon-home2"></i>Lihat
+                            Seluruh Disposisi</a>
                     </li>
                     <li class="float-right">
                         <a class="nav-link" href="{{ URL('admin/pilih-disposisi')}}"><i
@@ -41,33 +42,30 @@
                                     <h5 class="card-title">Add Disposisi</h5>
                                     <div class="form-row">
                                         <div class="col-md-8">
-                                            <input type="hidden" class="form-control disabled" id="id_surats" name="id_surats"
+                                            <input type="hidden" class="form-control disabled" id="id_surats"
+                                                   name="id_surats"
                                                    value="{{$disposisi->id_surats}}" required>
                                             <div class="form-group m-0">
                                                 <label for="no_surats" class="col-form-label s-12">No Surat</label>
-                                                <input name="no_surats" class="form-control r-0 light s-12 " value="{{$disposisi->no_surat}}" readonly>
+                                                <input name="no_surats" class="form-control r-0 light s-12 "
+                                                       value="{{$disposisi->no_surat}}" readonly>
                                             </div>
                                             <div class="form-group m-0">
                                                 <label for="untuk" class="col-form-label s-12">Kepada</label>
-                                                <input class="form-control r-0 light s-12 " value="{{$disposisi->name}}">
-                                                <input name="untuk" class="form-control r-0 light s-12 " value="{{$disposisi->id_user}}" type="hidden">
+                                                <input class="form-control r-0 light s-12 "
+                                                       value="{{$disposisi->name}}">
+                                                <input name="untuk" class="form-control r-0 light s-12 "
+                                                       value="{{$disposisi->id_user}}" type="hidden">
                                             </div>
                                             <div class="form-group m-0">
                                                 <label for="dari" class="col-form-label s-12">Oleh</label>
-                                                <input id="test" onkeydown="update()" name="dari"
+                                                <input id="test" name="dari" value="{{\Illuminate\Support\Facades\Session::get('clog')}}"
                                                        class="form-control r-0 light s-12 " type="text">
                                             </div>
                                             <div class="form-group m-0">
-                                                <label for="disposisi_status" class="col-form-label s-12">Disposisi
-                                                    Status</label>
-                                                <input name="disposisi_status" class="form-control r-0 light s-12 "
+                                                <label for="keterangan_disposisi" class="col-form-label s-12">Keterangan Disposisi</label>
+                                                <input name="keterangan_disposisi" class="form-control r-0 light s-12 "
                                                        type="text">
-                                            </div>
-                                            <div class="form-group m-0">
-                                                <label for="status_surat_disposisi" class="col-form-label s-12">Status
-                                                    Surat Disposisi</label>
-                                                <input name="status_surat_disposisi"
-                                                       class="form-control r-0 light s-12 " type="text">
                                             </div>
                                             <div class="form-group m-0">
                                                 <label for="tipe_surat_disposisi" class="col-form-label s-12">Tipe Surat
