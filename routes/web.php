@@ -39,7 +39,7 @@ Route::get('/admin/get-jabatan', 'JabatanController@GetJabatan');
 Route::get('/admin/create-jabatan', 'JabatanController@showCreateJabatan');
 Route::post('/admin/create-jabatan', 'JabatanController@CreateJabatan');
 Route::get('/admin/delete-jabatan/{id}', 'JabatanController@DeleteJabatan');
-Route::get('/admin/edit-jabatan/{id}', 'JabatanController@showEditRJabatan');
+Route::get('/admin/edit-jabatan/{id}', 'JabatanController@showEditJabatan');
 Route::post('/admin/edit-jabatan/', 'JabatanController@UpdateJabatan');
 
 Route::get('/admin/get-rootjab', 'RootJabatanController@GetRootJabatan');
