@@ -69,6 +69,7 @@
                                                                     class="form-control r-0 light s-12"
                                                                     required="">
                                                                 <option>Pilih Tipe Surat</option>
+                                                                <option value="" selected hidden>Choose here</option>
                                                                 <option value="internal">Internal</option>
                                                                 <option value="eksternal">Eksternal</option>
                                                                 <option value="keluar">Keluar</option>
