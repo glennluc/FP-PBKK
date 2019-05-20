@@ -92,4 +92,10 @@ class JabatanController extends Controller
 
         return redirect('admin/get-jabatan');
     }
+
+    public function DeleteJabatan($id)
+    {
+        $bagian = DB::table('jabatans')->where('id_jabatan', $id)->delete();
+        return redirect('admin/get-jabatan');
+    }
 }
