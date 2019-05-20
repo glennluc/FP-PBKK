@@ -63,4 +63,5 @@ Route::get('/admin/pilih-disposisi','DisposisiController@pilihDisposisi');
 
 Route::get('/admin/get-laporan', 'LaporanController@GetLaporan');
 Route::post('/admin/show-laporan/', 'LaporanController@ShowLaporan');
+Route::get('/admin/export-laporan/', 'LaporanController@ExportLaporan');
 

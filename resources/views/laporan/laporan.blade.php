@@ -81,6 +81,9 @@
                                                         Search
                                                     </button>
                                                 </div>
+                                                <div class="col-md-1" style="margin-top: 60pt">
+                                                    <a href="{{ URL('admin/export-laporan')}}">Export Excel</a>
+                                                </div>
                                             </fieldset>
                                         </form>
                                     </div>

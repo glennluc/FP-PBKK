@@ -13,6 +13,10 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Http\RedirectResponse;
 
+use App\Exports\LaporanExport;
+use Maatwebsite\Excel\Facades\Excel;
+use App\Http\Controllers\Controller;
+
 class LaporanController extends Controller
 {
     Public function GetLaporan()
@@ -29,7 +33,6 @@ class LaporanController extends Controller
         $tipeSurat = $request->tipeSurat;
 
         $sampaiTanggal = date('Y-m-d');
-        dd(date('Y-m-d'));
 
         if ($dariTanggal = null && $sampaiTanggal != null && $tipeSurat != null)
             $surat = DB::table('surats')
@@ -58,5 +61,11 @@ class LaporanController extends Controller
 
         return view('laporan/laporan', compact('dariTanggal', 'sampaiTanggal', 'tipeSurat', 'surat'));
     }
+
+    public function ExportLaporan()
+    {
+        return Excel::download(new LaporanExport, 'Laporan.xlsx');
+    }
+
 
 }
