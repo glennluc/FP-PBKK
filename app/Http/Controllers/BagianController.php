@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
+
 use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 use App\Bagian;
@@ -10,13 +11,13 @@ class BagianController extends Controller
     Public function GetBagian()
     {
         $bagian = DB::table('bagians')
-                ->get() ;
-        return view('admin/bagian',['bagian'=>$bagian]);
+            ->get();
+        return view('bagian/bagian', ['bagian' => $bagian]);
     }
 
     Public function showCreateBagian()
-    {    
-        return view('admin/create_bagian');
+    {
+        return view('bagian/create_bagian');
     }
 
     Public function CreateBagian(Request $request)
@@ -29,25 +30,26 @@ class BagianController extends Controller
 
         $bagian->save();
 
-        return redirect('admin/get-bagian');
+        return redirect('bagian/get-bagian');
     }
 
     public function DeleteBagian($id)
     {
-    	$bagian = DB::table('bagians')->where('id_bagian', $id)->delete();
-        return redirect('admin/get-bagian');
+        $bagian = DB::table('bagians')->where('id_bagian', $id)->delete();
+        return redirect('bagian/get-bagian');
     }
 
     Public function showEditBagian($id)
     {
-    	$bagian = DB::table('bagians')
-                ->where('id_bagian',$id)->get() ;
-        return view('admin/edit_bagian', compact('bagian'));
+        $bagian = DB::table('bagians')
+            ->where('id_bagian', $id)
+            ->get();
+        return view('bagian/edit_bagian', compact('bagian'));
     }
 
     Public function UpdateBagian(Request $request)
     {
-    	$bagian = array(
+        $bagian = array(
             'kode_bagian' => $request->kode_bagian,
             'nama_bagian' => $request->nama_bagian,
             'keterangan' => $request->keterangan
@@ -57,9 +59,7 @@ class BagianController extends Controller
             ->where('id_bagian', $request->id)
             ->update($bagian);
 
-        return redirect('admin/get-bagian');
+        return redirect('bagian/get-bagian');
     }
 
-
-    
 }

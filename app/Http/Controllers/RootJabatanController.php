@@ -10,6 +10,6 @@ class RootJabatanController extends Controller
     {
         $rootjab = DB::table('rootjabatans')
                 ->get() ;
-        return view('admin/rootjabatan',['rootjab'=>$rootjab]);
+        return view('rootjabatan/rootjabatan',['rootjab'=>$rootjab]);
     }
 }

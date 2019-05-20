@@ -10,6 +10,6 @@ class JabatanController extends Controller
     {
         $jabatan = DB::table('jabatans')
                 ->get() ;
-        return view('admin/jabatan',['jabatan'=>$jabatan]);
+        return view('jabatan/jabatan',['jabatan'=>$jabatan]);
     }
 }
