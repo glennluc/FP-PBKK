@@ -155,32 +155,40 @@
                     </a>
 
                 </li>
-                <li class="treeview"><a href="#"><i class="icon icon-account_box light-green-text s-18"></i>Management<i
-                                class="icon icon-angle-left s-18 pull-right"></i></a>
-                    <ul class="treeview-menu">
-                        <li><a href="{{URL('admin/get-user')}}"><i class="icon icon-circle-o"></i>User</a></li>
-                        <li><a href="{{URL('admin/get-bagian')}}"><i class="icon icon-circle-o"></i>Bagian</a></li>
-                        <li><a href="{{URL('admin/get-jabatan')}}"><i class="icon icon-circle-o"></i>Jabatan</a></li>
-                        <li><a href="{{URL('admin/get-rootjab')}}"><i class="icon icon-circle-o"></i>Root Jabatan</a>
-                        </li>
-                    </ul>
-                </li>
+                @if(\Illuminate\Support\Facades\Session::get('auth') == 'admin')
+                    {
+                    <li class="treeview"><a href="#"><i class="icon icon-account_box light-green-text s-18"></i>Management<i
+                                    class="icon icon-angle-left s-18 pull-right"></i></a>
+                        <ul class="treeview-menu">
+                            <li><a href="{{URL('admin/get-user')}}"><i class="icon icon-circle-o"></i>User</a></li>
+                            <li><a href="{{URL('admin/get-bagian')}}"><i class="icon icon-circle-o"></i>Bagian</a></li>
+                            <li><a href="{{URL('admin/get-jabatan')}}"><i class="icon icon-circle-o"></i>Jabatan</a>
+                            </li>
+                            <li><a href="{{URL('admin/get-rootjab')}}"><i class="icon icon-circle-o"></i>Root
+                                    Jabatan</a>
+                            </li>
+                        </ul>
+                    </li>
+                    }
+                @endif
                 <li class="treeview no-b"><a href="#">
                         <i class="icon icon-package light-green-text s-18"></i>
                         <span>Surat</span>
                         <span class="badge r-3 badge-success pull-right">20</span>
                     </a>
                     <ul class="treeview-menu">
-                        <li><a href="{{URL('admin/get-surat')}}"><i class="icon icon-circle-o"></i>Surat
+                        <li><a href="{{URL('admin/get-surat')}}"><i class="icon icon-circle-o"></i>Tambah Surat
                                 Masuk/Keluar</a>
                         </li>
-                        <li><a href="{{URL('admin/get-laporan')}}"><i class="icon icon-circle-o"></i>Laporan Surat
-                                Masuk/Keluar</a>
-                        </li>
-                        <li><a href="{{URL('admin/get-arsipsurat')}}"><i class="icon icon-circle-o"></i>Arsip Surat</a>
-                        </li>
-                        <li><a href="{{URL('admin/get-disposisi')}}"><i class="icon icon-circle-o"></i>Disposisi</a>
-                        </li>
+                        @if(\Illuminate\Support\Facades\Session::get('auth') == 'admin' || \Illuminate\Support\Facades\Session::get('auth') == 'sekretaris')
+                            <li><a href="{{URL('admin/get-laporan')}}"><i class="icon icon-circle-o"></i>Laporan Surat
+                                    Masuk/Keluar</a>
+                            </li>
+                            <li><a href="{{URL('admin/get-arsipsurat')}}"><i class="icon icon-circle-o"></i>Arsip Surat</a>
+                            </li>
+                            <li><a href="{{URL('admin/get-disposisi')}}"><i class="icon icon-circle-o"></i>Disposisi</a>
+                            </li>
+                        @endif
                     </ul>
                 </li>
             </ul>
@@ -201,38 +209,38 @@
             </div>
         </div>
 
-    </section>
-    </aside>
-@yield('content')
+        </section>
+        </aside>
+    @yield('content')
 
-<!-- Add the sidebar's background. This div must be placed
+    <!-- Add the sidebar's background. This div must be placed
          immediately after the control sidebar -->
-    <div class="control-sidebar-bg shadow white fixed"></div>
-</div>
-<!--/#app -->
-<script src="{{asset('assets/js/app.js')}}"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.js"></script>
-<script>
-    var msg = '{{Session::get('popup')}}';
-    var exist = '{{Session::has('popup')}}';
-    if(exist){
-        alert(msg);
-    }
-</script>
+        <div class="control-sidebar-bg shadow white fixed"></div>
+    </div>
+    <!--/#app -->
+    <script src="{{asset('assets/js/app.js')}}"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.js"></script>
+    <script>
+        var msg = '{{Session::get('popup')}}';
+        var exist = '{{Session::has('popup')}}';
+        if (exist) {
+            alert(msg);
+        }
+    </script>
 
 
-<!--
---- Footer Part - Use Jquery anywhere at page.
---- http://writing.colin-gourlay.com/safely-using-ready-before-including-jquery/
--->
-<script>(function ($, d) {
-        $.each(readyQ, function (i, f) {
-            $(f)
-        });
-        $.each(bindReadyQ, function (i, f) {
-            $(d).bind("ready", f)
-        })
-    })(jQuery, document)</script>
+    <!--
+    --- Footer Part - Use Jquery anywhere at page.
+    --- http://writing.colin-gourlay.com/safely-using-ready-before-including-jquery/
+    -->
+    <script>(function ($, d) {
+            $.each(readyQ, function (i, f) {
+                $(f)
+            });
+            $.each(bindReadyQ, function (i, f) {
+                $(d).bind("ready", f)
+            })
+        })(jQuery, document)</script>
 </body>
 </html>
 

@@ -41,7 +41,7 @@ class LoginController extends Controller
                 ->where('id_user', $user->id_user)
                 ->update(['last_login' => $mytime]);
             
-            if ($user->authority == "admin" || $user->authority == "user")
+            if ($user->authority == "admin" || $user->authority == "user" || $user->authority == 'sekretaris')
             {
                 $current_login = $user->name;
                 $cur_id = $user->id_user;
