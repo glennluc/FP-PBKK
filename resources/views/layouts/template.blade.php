@@ -137,11 +137,9 @@
                     <div class="clearfix"></div>
                     <div class="collapse multi-collapse" id="userSettingsCollapse">
                         <div class="list-group mt-3 shadow">
-                            <a href="index-2.html" class="list-group-item list-group-item-action ">
-                                <i class="mr-2 icon-umbrella text-blue"></i>Profile
-                            </a>
-                            <a href="#" class="list-group-item list-group-item-action"><i
-                                        class="mr-2 icon-security text-purple"></i>Change Password</a>
+                            {{--<a href="index-2.html" class="list-group-item list-group-item-action ">--}}
+                            {{--<i class="mr-2 icon-umbrella text-blue"></i>Profile--}}
+                            {{--</a>--}}
                             <a href="{{url('logout')}}" class="list-group-item list-group-item-action"><i
                                         class="mr-2 icon-cogs text-yellow"></i>Log Out</a>
                         </div>
@@ -150,14 +148,17 @@
             </div>
             <ul class="sidebar-menu">
                 <li class="header"><strong>MAIN NAVIGATION</strong></li>
+                @if(\Illuminate\Support\Facades\Session::get('auth') == 'admin' || \Illuminate\Support\Facades\Session::getName('auth') == 'sekretaris')
                 <li class="treeview"><a href="{{URL('admin/dashboard')}}">
                         <i class="icon icon-sailing-boat-water purple-text s-18"></i> <span>Dashboard</span>
                     </a>
 
                 </li>
+                @endif
                 @if(\Illuminate\Support\Facades\Session::get('auth') == 'admin')
                     <li class="treeview"><a href="#"><i class="icon icon-account_box light-green-text s-18"></i>Management<i
-                                    class="icon icon-angle-left s-18 pull-right"></i></a>
+                                    class="icon icon-angle-left s-18 pull-right"></i>
+                            <span class="badge r-3 badge-primary pull-right">{{count($user)}}</span></a>
                         <ul class="treeview-menu">
                             <li><a href="{{URL('admin/get-user')}}"><i class="icon icon-circle-o"></i>User</a></li>
                             <li><a href="{{URL('admin/get-bagian')}}"><i class="icon icon-circle-o"></i>Bagian</a></li>
@@ -172,7 +173,9 @@
                 <li class="treeview no-b"><a href="#">
                         <i class="icon icon-package light-green-text s-18"></i>
                         <span>Surat</span>
-                        <span class="badge r-3 badge-success pull-right">20</span>
+                        @if(\Illuminate\Support\Facades\Session::get('auth') == 'admin' || \Illuminate\Support\Facades\Session::get('auth') == 'sekretaris')
+                        <span class="badge r-3 badge-success pull-right">{{count($surat)}}</span>
+                            @endif
                     </a>
                     <ul class="treeview-menu">
                         <li><a href="{{URL('admin/get-surat')}}"><i class="icon icon-circle-o"></i>Tambah Surat
