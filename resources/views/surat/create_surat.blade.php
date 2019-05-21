@@ -44,11 +44,11 @@
                                                 @if($date->month < 10)
                                                     <input name="no_surat" class="form-control r-0 light s-12 "
                                                            value="{{$surat->id_surat+1 .'/TC.0' . $date->month . '/' . $date->year}}"
-                                                           readonly>
+                                                           >
                                                 @else
                                                     <input name="no_surat" class="form-control r-0 light s-12 "
                                                            value="{{$surat->id_surat+1 .'/TC.' . $date->month . '/' . $date->year}}"
-                                                           readonly>
+                                                           >
                                                 @endif
                                             </div>
                                             <div class="form-group m-0">
