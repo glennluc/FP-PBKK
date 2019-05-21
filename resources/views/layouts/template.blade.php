@@ -158,7 +158,7 @@
                 @if(\Illuminate\Support\Facades\Session::get('auth') == 'admin')
                     <li class="treeview"><a href="#"><i class="icon icon-account_box light-green-text s-18"></i>Management<i
                                     class="icon icon-angle-left s-18 pull-right"></i>
-                            <span class="badge r-3 badge-primary pull-right">{{count($user)}}</span></a>
+                            <span class="badge r-3 badge-primary pull-right"></span></a>
                         <ul class="treeview-menu">
                             <li><a href="{{URL('admin/get-user')}}"><i class="icon icon-circle-o"></i>User</a></li>
                             <li><a href="{{URL('admin/get-bagian')}}"><i class="icon icon-circle-o"></i>Bagian</a></li>
@@ -174,7 +174,7 @@
                         <i class="icon icon-package light-green-text s-18"></i>
                         <span>Surat</span>
                         @if(\Illuminate\Support\Facades\Session::get('auth') == 'admin' || \Illuminate\Support\Facades\Session::get('auth') == 'sekretaris')
-                        <span class="badge r-3 badge-success pull-right">{{count($surat)}}</span>
+                        <span class="badge r-3 badge-success pull-right"></span>
                             @endif
                     </a>
                     <ul class="treeview-menu">
